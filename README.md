@@ -8,7 +8,7 @@ Prediction (tentative)
 ![tentative_checkpoint_results](resources/demo4.png "tentative ckpt result2")
 
 - [tf.keras implementation of P2PNet](#tfkeras-implementation-of-p2pnet)
-    - [Quick Demo](#quick-demo)
+  - [Quick Demo](#quick-demo)
   - [Instructions](#instructions)
     - [Installation](#installation)
     - [Demo](#demo)
@@ -30,7 +30,7 @@ Prediction (tentative)
     - [Basics](#basics)
     - [Default Hyperparameters](#default-hyperparameters)
 
-### Quick Demo
+## Quick Demo
 Open this notebook in colab and execute.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/totti0223/P2PNet_tfkeras/blob/master/notebooks/P2PNet_colab_demo.ipynb)
