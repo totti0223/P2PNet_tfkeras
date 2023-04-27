@@ -8,8 +8,8 @@ Prediction (tentative)
 ![tentative_checkpoint_results](resources/demo4.png "tentative ckpt result2")
 
 - [tf.keras implementation of P2PNet](#tfkeras-implementation-of-p2pnet)
-  - [Instructions](#instructions)
     - [Quick Demo](#quick-demo)
+  - [Instructions](#instructions)
     - [Installation](#installation)
     - [Demo](#demo)
     - [Training with SHHA dataset](#training-with-shha-dataset)
@@ -30,10 +30,11 @@ Prediction (tentative)
     - [Basics](#basics)
     - [Default Hyperparameters](#default-hyperparameters)
 
+### Quick Demo
+Open this notebook in colab and execute.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/totti0223/blob/master/P2PNet_colab_demo.ipynb)
 
 ## Instructions
-
-### Quick Demo
 
 ### Installation
 1. Clone the repository
