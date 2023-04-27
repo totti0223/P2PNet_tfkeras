@@ -1,3 +1,12 @@
+# tf.keras implementation of P2PNet
+- This repository contains codes for P2PNet Crowd Counting implemented in tensorflow.keras. *(UNDER DEVELOPMENT)*. 
+- The code is prepared for easy backbone and FPN replacement.
+- **Disclaimer**. As I am rather a user than a writer of DL, don't blame me for any inefficiency or misimplementation of the citing paper. This was created for my personal use. Pull requests and advices are really welcome. Issues are also welcome but cannnot guarantee any solution.
+
+Prediction (tentative)
+
+![tentative_checkpoint_results](resources/demo4.png "tentative ckpt result2")
+
 - [tf.keras implementation of P2PNet](#tfkeras-implementation-of-p2pnet)
   - [Instructions](#instructions)
     - [Quick Demo](#quick-demo)
@@ -20,16 +29,6 @@
   - [Comparison to the official repo.](#comparison-to-the-official-repo)
     - [Basics](#basics)
     - [Default Hyperparameters](#default-hyperparameters)
-
-
-# tf.keras implementation of P2PNet
-- This repository contains codes for P2PNet Crowd Counting implemented in tensorflow.keras. *(UNDER DEVELOPMENT)*. 
-- The code is prepared for easy backbone and FPN replacement.
-- **Disclaimer**. As I am rather a user than a writer of DL, don't blame me for any inefficiency or misimplementation of the citing paper. This was created for my personal use. Pull requests and advices are really welcome. Issues are also welcome but cannnot guarantee any solution.
-
-Prediction (tentative)
-
-![tentative_checkpoint_results](resources/demo4.png "tentative ckpt result2")
 
 
 ## Instructions
