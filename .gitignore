@@ -1,0 +1,21 @@
+# private folder
+private/
+wandb/
+
+# python
+*.py[cod]
+*$py.class
+
+# macOS
+.DS_Store
+
+# Editors
+*~
+*.swp
+*.swo
+*.bak
+*.pyc
+
+# Virtual Environments
+venv/
+env/
