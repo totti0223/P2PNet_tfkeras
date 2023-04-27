@@ -33,7 +33,7 @@ Prediction (tentative)
 ### Quick Demo
 Open this notebook in colab and execute.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/totti0223/blob/master/P2PNet_colab_demo.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/totti0223/P2PNet_tfkeras/blob/master/notebooks/P2PNet_colab_demo.ipynb)
 
 ## Instructions
 
