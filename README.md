@@ -38,6 +38,7 @@ Open this notebook in colab and execute.
 ## Instructions
 
 ### Installation
+*Installation scripts are not ready yet. this is a place holder*
 1. Clone the repository
 2. ```cd THISREPO```
 3. ```pip install -r requirements.txt```
@@ -50,11 +51,10 @@ Open this notebook in colab and execute.
      - scikit-image
 
 ### Demo
-1. ```python demo_test.py -ckpt models/provisionaryckpt```
 ### Training with SHHA dataset
 1. Download SHHA dataset [here](https://www.kaggle.com/datasets/tthien/shanghaitech)
 2. Convert .mat format to COCO format. [See Notebook](./notebooks/convert_shanghaitechdataset.ipynb).
-3. Train
+3. Train (Training script will be available in the future. mean while, you can write your own based on the following details)
 
 
 ### Details
