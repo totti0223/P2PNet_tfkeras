@@ -21,7 +21,7 @@ Prediction (tentative)
     - [Compile \& Train](#compile--train)
     - [Predict, Post Process, and Visualize](#predict-post-process-and-visualize)
   - [To do](#to-do)
-    - [Unresolved Issues](#unresolved-issues)
+  - [Unresolved Issues](#unresolved-issues)
   - [Misc.](#misc)
     - [Reference](#reference)
     - [Wandb compatibility](#wandb-compatibility)
@@ -296,7 +296,7 @@ print(preds)
 - Retreive Performance against SHHA dataset.
 
 
-### Unresolved Issues
+## Unresolved Issues
 - The tensorflow keras model is coded by subclass API. therefore model can be loaded via checkpoint only. Looking for a workaround to save the model via SavedModel, however have not found such solution yet.
 - Training runs fine, however the below Warning message is displayed. This does not affect the training process, but I don't know why this occurs.
 - 
@@ -317,7 +317,7 @@ print(preds)
     - To avoid legal issues, I tentatively set the license following the [official](https://github.com/TencentYoutuResearch/CrowdCounting-P2PNet/blob/main/LICENSE). However, after confirmation, can release the repo as other license format. Read the following note.
   - **ADVICE WANTED**. 
     - The original repo states that any "with modification" of the repo will be restricted to the original license. However I wrote this code from scratch reading the paper, and believe is not a derivative, therefore I beleive I can set any license I want. 
-    - Nonetheless, I can not assure to any third person for use of this repo in other license format, as I am not a professional in this field, as the context of "with modification" is vague to me. Reading the codes to understand what I could not interpret only from the paper, will that be the case?
+    - Nonetheless, I can not assure to any third person for use of this repo in other license format, as I am not a professional in this field, as the context of "with modification" is vague to me.
     - If someone can confirm/assure that this repo codes are safe to set my own license, I can change the LICENCE as soon as possible. 
 
 - [detr-tensorflow](https://github.com/Visual-Behavior/detr-tensorflow) 
