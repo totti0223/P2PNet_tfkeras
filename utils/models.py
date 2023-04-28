@@ -17,38 +17,38 @@ class RefPoints(tf.keras.layers.Layer):
         x = (tf.range(1, line + 1, dtype=tf.float32) - 0.5) * line_step - stride / 2
         y = (tf.range(1, row + 1, dtype=tf.float32) - 0.5) * row_step - stride / 2
         x, y = tf.meshgrid(x, y)
-        anchor_points = tf.stack((
+        ref_points = tf.stack((
             tf.reshape(x, (-1,)),
             tf.reshape(y, (-1,))
         ), axis=-1)
 
-        return anchor_points
+        return ref_points
 
-    def add_offset2refpoints(self, shape, stride, anchor_points):
+    def add_offset2refpoints(self, shape, stride, ref_points):
         x = (tf.range(0, shape[1], dtype=tf.float32) + 0.5) * stride
         y = (tf.range(0, shape[0], dtype=tf.float32) + 0.5) * stride
         x, y = tf.meshgrid(x, y)
         shifts = tf.stack([tf.reshape(x, [-1]), tf.reshape(y, [-1])], axis=1)
-        M = tf.shape(anchor_points)[0]
+        M = tf.shape(ref_points)[0]
         N = tf.shape(shifts)[0]
-        offsetted_anchor_points = (tf.reshape(anchor_points, [1, M, 2]) + tf.reshape(shifts, [N, 1, 2]))
-        offsetted_anchor_points = tf.reshape(offsetted_anchor_points, [M * N, 2])
-        return offsetted_anchor_points
+        offsetted_ref_points = (tf.reshape(ref_points, [1, M, 2]) + tf.reshape(shifts, [N, 1, 2]))
+        offsetted_ref_points = tf.reshape(offsetted_ref_points, [M * N, 2])
+        return offsetted_ref_points
 
     def call(self, image):
         image_shape = tf.shape(image)[1:3]
         image_shapes = [(image_shape + 2 ** x - 1) // (2 ** x) for x in self.pyramid_levels]
-        all_anchor_points = tf.zeros((0, 2), dtype=tf.float32)
+        output_ref_points = tf.zeros((0, 2), dtype=tf.float32)
         
-        anchor_points = self.generate_ref_points(2**self.pyramid_levels[0], row=self.row, line=self.line)
-        offsetted_anchor_points = self.add_offset2refpoints(image_shapes[0], self.strides[0], tf.cast(anchor_points, tf.float32))
-        all_anchor_points = tf.concat([all_anchor_points, offsetted_anchor_points], axis=0)
+        ref_points = self.generate_ref_points(2**self.pyramid_levels[0], row=self.row, line=self.line)
+        offsetted_ref_points = self.add_offset2refpoints(image_shapes[0], self.strides[0], tf.cast(ref_points, tf.float32))
+        output_ref_points = tf.concat([output_ref_points, offsetted_ref_points], axis=0)
         
-        all_anchor_points = tf.tile(
-            tf.expand_dims(all_anchor_points, axis=0),
+        output_ref_points = tf.tile(
+            tf.expand_dims(output_ref_points, axis=0),
             multiples = [tf.shape(image)[0], 1, 1]
         )
-        return all_anchor_points
+        return output_ref_points
     
     def get_config(self):
         config = super(RefPoints, self).get_config()
@@ -150,12 +150,12 @@ class P2PNet(tf.keras.models.Model):
         reg = tf.reshape(reg, (regshape[0], -1, 2))
 
         # anchor points
-        anchor_points = RefPoints(
+        ref_points = RefPoints(
             pyramid_levels=[3,],
             row=np.sqrt(self.no_reference_points),
             line=np.sqrt(self.no_reference_points))(inputs)
     
-        reg = reg * self.gamma + anchor_points
+        reg = reg * self.gamma + ref_points
 
         outputs = tf.concat([reg, cls], axis=-1)
         return outputs
