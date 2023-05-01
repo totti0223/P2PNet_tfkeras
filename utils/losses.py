@@ -29,7 +29,7 @@ def np_tf_linear_sum_assignment(matrix):
     pred_selector = pred_selector.astype(bool)
     return [target_indices, pred_indices, target_selector, pred_selector]
 
-def hungarian_matcher(t_points, t_class, p_points, p_class, tau1=0.05):
+def hungarian_matcher(t_points, t_class, p_points, p_class, tau1=0.05,filternonzero=True):
         '''
         t_points: tensor of shape [num_of_gt_boxes, 2]
         t_class: [num_of_get_boxes, 1] # last dimention is a int containing values from 0 to num_classes. 0 is background
@@ -39,10 +39,11 @@ def hungarian_matcher(t_points, t_class, p_points, p_class, tau1=0.05):
         tau1: weight used for matching
         '''
         # exclude the zero elements first from the GT
-        t_class = tf.squeeze(t_class, axis=-1)
-        nonzero = tf.math.count_nonzero(t_class, dtype=tf.int32)
-        t_class = tf.slice(t_class, [0], [nonzero])
-        t_points = tf.slice(t_points, [0, 0], [nonzero, -1])
+        if filternonzero:
+            t_class = tf.squeeze(t_class, axis=-1)
+            nonzero = tf.math.count_nonzero(t_class, dtype=tf.int32)
+            t_class = tf.slice(t_class, [0], [nonzero])
+            t_points = tf.slice(t_points, [0, 0], [nonzero, -1])
         
         softmax = tf.nn.softmax(p_class)
         cost_class = -tf.gather(softmax, t_class, axis=1)
@@ -103,65 +104,114 @@ def loss_points(lossfunc, p_points,p_class,
     #loss = tf.reduce_sum(loss)
     return loss
 
-@tf.function
-def P2PLoss(y_true, y_pred):
-    def calculate_loss(idx):
-        # Select a single element from the batch
-        p_points = predicted_points[idx]
-        p_class = predicted_label[idx]
-        t_points = target_points[idx]
-        t_class = target_label[idx]
+class P2PLoss(tf.keras.losses.Loss):
+    def __init__(self, lambda1 = 0.5, lambda2=0.0002, tau1 = 0.05, name='P2PLoss'):
+        super(P2PLoss, self).__init__(name=name)
+        self.lambda1 = lambda1
+        self.lambda2 = lambda2
+        self.tau1 = tau1
+
+    def call(self, y_true, y_pred):
+        def calculate_loss(idx):
+            # Select a single element from the batch
+            p_points = predicted_points[idx]
+            p_class = predicted_label[idx]
+            t_points = target_points[idx]
+            t_class = target_label[idx]
+            
+            # Match predicted and target points
+            t_indices, p_indices, t_selector, p_selector, t_points, t_class\
+                    = hungarian_matcher(t_points, t_class, p_points, p_class, tau1 = self.tau1)
+            
+
+            # Calculate points loss and label loss
+            _points_cost = loss_points(tf.keras.losses.MeanSquaredError(),
+                                        p_points, p_class, t_points, t_class,
+                                        t_indices, p_indices, t_selector, p_selector)
+    #             _label_cost, true_neg, true_pos, pos_accuracy = loss_labels(p_points, p_class, t_points, t_class, t_indices, p_indices, t_selector, p_selector, background_class=0)
+            _label_cost = loss_labels(p_points, p_class, t_points, t_class,
+                                        t_indices, p_indices, t_selector, p_selector,
+                                        background_class=0, lambda1 = self.lambda1)
+
+            return _label_cost, _points_cost
         
-        # Match predicted and target points
-        t_indices, p_indices, t_selector, p_selector, t_points, t_class\
-                = hungarian_matcher(t_points, t_class, p_points, p_class)
+        predicted_points = y_pred[...,0:2]
+        predicted_label = y_pred[...,2:]
+        target_points = y_true[...,0:2]
+        target_label = tf.cast(y_true[...,2:], tf.int64)
+        
+        # Use tf.map_fn() to calculate loss for each element in the batch
+        label_cost, points_cost = tf.map_fn(
+            lambda i: calculate_loss(i),
+            elems=tf.range(tf.shape(predicted_points)[0]),
+            fn_output_signature=(tf.float32, tf.float32)
+        )
+
+        # Sum up the losses
+        label_cost = tf.reduce_sum(label_cost)
+        points_cost = tf.reduce_sum(points_cost)        
+
+        return label_cost + points_cost * self.lambda2
+
+# @tf.function
+# def P2PLoss(y_true, y_pred):
+#     def calculate_loss(idx):
+#         # Select a single element from the batch
+#         p_points = predicted_points[idx]
+#         p_class = predicted_label[idx]
+#         t_points = target_points[idx]
+#         t_class = target_label[idx]
+        
+#         # Match predicted and target points
+#         t_indices, p_indices, t_selector, p_selector, t_points, t_class\
+#                 = hungarian_matcher(t_points, t_class, p_points, p_class)
         
 
-        # Calculate points loss and label loss
-        _points_cost = loss_points(tf.keras.losses.MeanSquaredError(),
-                                    p_points, p_class, 
-                                    t_points, t_class,
-                                    t_indices, p_indices,
-                                    t_selector, p_selector)
-#             _label_cost, true_neg, true_pos, pos_accuracy = loss_labels(p_points, p_class, t_points, t_class, t_indices, p_indices, t_selector, p_selector, background_class=0)
-        _label_cost = loss_labels(p_points, p_class,
-                                    t_points, t_class,
-                                    t_indices, p_indices,
-                                    t_selector, p_selector,
-                                    background_class=0)
+#         # Calculate points loss and label loss
+#         _points_cost = loss_points(tf.keras.losses.MeanSquaredError(),
+#                                     p_points, p_class, 
+#                                     t_points, t_class,
+#                                     t_indices, p_indices,
+#                                     t_selector, p_selector)
+# #             _label_cost, true_neg, true_pos, pos_accuracy = loss_labels(p_points, p_class, t_points, t_class, t_indices, p_indices, t_selector, p_selector, background_class=0)
+#         _label_cost = loss_labels(p_points, p_class,
+#                                     t_points, t_class,
+#                                     t_indices, p_indices,
+#                                     t_selector, p_selector,
+#                                     background_class=0)
 
-        return _label_cost, _points_cost
-    # gt_points, gt_labels = y_true[..., :2], y_true[..., 2:]
-    # pred_points, pred_logits = y_pred[..., :2], y_pred[..., 2:]    
-    predicted_points = y_pred[...,0:2]
-    predicted_label = y_pred[...,2:]
-    target_points = y_true[...,0:2]
-    target_label = tf.cast(y_true[...,2:], tf.int64)
+#         return _label_cost, _points_cost
+#     # gt_points, gt_labels = y_true[..., :2], y_true[..., 2:]
+#     # pred_points, pred_logits = y_pred[..., :2], y_pred[..., 2:]    
+#     predicted_points = y_pred[...,0:2]
+#     predicted_label = y_pred[...,2:]
+#     target_points = y_true[...,0:2]
+#     target_label = tf.cast(y_true[...,2:], tf.int64)
     
-    # Use tf.map_fn() to calculate loss for each element in the batch
-    label_cost, points_cost = tf.map_fn(
-        lambda i: calculate_loss(i),
-        elems=tf.range(tf.shape(predicted_points)[0]),
-        fn_output_signature=(tf.float32, tf.float32)
-    )
+#     # Use tf.map_fn() to calculate loss for each element in the batch
+#     label_cost, points_cost = tf.map_fn(
+#         lambda i: calculate_loss(i),
+#         elems=tf.range(tf.shape(predicted_points)[0]),
+#         fn_output_signature=(tf.float32, tf.float32)
+#     )
 
-    # Sum up the losses
-    label_cost = tf.reduce_sum(label_cost)
-    points_cost = tf.reduce_sum(points_cost)        
+#     # Sum up the losses
+#     label_cost = tf.reduce_sum(label_cost)
+#     points_cost = tf.reduce_sum(points_cost)        
 
-    return label_cost + points_cost * 0.0002
-    #return label_cost, points_cost
-    # # Match the pred_points and gt_points
-    # matched_pred_points, matched_pred_logits, matched_gt_points = match_points(pred_points, gt_points, pred_logits, gt_labels)
+#     return label_cost + points_cost * 0.0002
+#     #return label_cost, points_cost
+#     # # Match the pred_points and gt_points
+#     # matched_pred_points, matched_pred_logits, matched_gt_points = match_points(pred_points, gt_points, pred_logits, gt_labels)
 
-    # # Calculate the coordinate loss (MSE)
-    # coord_loss = tf.keras.losses.mean_squared_error(matched_gt_points, matched_pred_points)
+#     # # Calculate the coordinate loss (MSE)
+#     # coord_loss = tf.keras.losses.mean_squared_error(matched_gt_points, matched_pred_points)
 
-    # # Calculate the label loss
-    # gt_labels_one_hot = tf.one_hot(gt_labels, depth=2)
-    # label_loss = tf.keras.losses.categorical_crossentropy(gt_labels_one_hot, matched_pred_logits, from_logits=True)
+#     # # Calculate the label loss
+#     # gt_labels_one_hot = tf.one_hot(gt_labels, depth=2)
+#     # label_loss = tf.keras.losses.categorical_crossentropy(gt_labels_one_hot, matched_pred_logits, from_logits=True)
 
-    # # Combine the losses
-    # total_loss = coord_loss + label_loss
+#     # # Combine the losses
+#     # total_loss = coord_loss + label_loss
 
-    # return total_loss
+#     # return total_loss

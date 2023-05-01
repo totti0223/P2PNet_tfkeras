@@ -76,7 +76,7 @@ from wandb.keras import WandbMetricsLogger, WandbEvalCallback
 
 from utils.dataloader import DataLoader
 from utils.losses import P2PLoss
-from utils.metrics import P2PMAE
+from utils.metrics import P2PMAE, P2PMSE
 from utils.models import P2PNet
 from utils.general import postprocess
 
@@ -228,7 +228,7 @@ for layer in model.layers:
     if 'backbone' in layer.name:
         logger.info("Freezing Layer: {}".format(layer.name))
         layer.trainable = False
-model.compile(loss = P2PLoss, optimizer=optimizer, metrics = [P2PMAE()])
+model.compile(loss = P2PLoss(), optimizer=optimizer, metrics = [P2PMAE(),P2PMSE()])
 model.fit(train_dt,epochs=15,workers=15, use_multiprocessing=True)
 
 # main run
@@ -237,7 +237,7 @@ for layer in model.layers:
     if 'backbone' in layer.name:
         logger.info("UnFreezing Layer: {}".format(layer.name))
         layer.trainable = True        
-model.compile(loss = P2PLoss, optimizer=optimizer, metrics = [P2PMAE()])
+model.compile(loss = P2PLoss(), optimizer=optimizer, metrics = [P2PMAE(),P2PMSE()])
 model.fit(train_dt,
           validation_data = val_dt,
           validation_freq=10,
