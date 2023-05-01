@@ -22,3 +22,4 @@ env/
 
 # temp
 weights/ckpt/VGG16_256_860.data-00000-of-00001
+ckpt_seed
