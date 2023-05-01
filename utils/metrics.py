@@ -78,7 +78,7 @@ class P2PMAE(tf.keras.metrics.Metric):
         absolute_error = tf.map_fn(lambda i: calculate_metric(i),
                                    elems = tf.range(tf.shape(y_true)[0]),
                                    fn_output_signature = tf.float32)
-        ae = tf.reduce_sum(absolute_error)
+        ae = tf.reduce_mean(absolute_error)
 
         # Update the total absolute error and counter
         self.total_absolute_error.assign_add(ae)
@@ -132,7 +132,7 @@ class P2PMSE(tf.keras.metrics.Metric):
         squared_error = tf.map_fn(lambda i: calculate_metric(i),
                                    elems = tf.range(tf.shape(y_true)[0]),
                                    fn_output_signature = tf.float32)
-        se = tf.reduce_sum(squared_error)
+        se = tf.reduce_mean(squared_error)
 
         # Update the total absolute error and counter
         self.total_squared_error.assign_add(se)
