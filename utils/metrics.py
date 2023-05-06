@@ -63,8 +63,8 @@ class P2PMAE(tf.keras.metrics.Metric):
             # get the _idx of where the max indices is 1  and max value > 0.5
             _idx = tf.where(tf.logical_and(max_indices == 1, max_values > 0.5))
             # the filtered _idx length is the predicted counts
-            pred_counts = tf.reduce_sum(_idx)
-            pred_counts = tf.cast(pred_counts, tf.float32)
+            # pred_counts = tf.reduce_sum(_idx)
+            pred_counts = tf.cast(tf.shape(_idx)[0], tf.float32)
 
             _absolute_error = tf.abs(gt_counts - pred_counts)
             # mean_squared_error = tf.square(gt_counts - pred_counts)
@@ -118,8 +118,8 @@ class P2PMSE(tf.keras.metrics.Metric):
             # get the _idx of where the max indices is 1  and max value > 0.5
             _idx = tf.where(tf.logical_and(max_indices == 1, max_values > 0.5))
             # the filtered _idx length is the predicted counts
-            pred_counts = tf.reduce_sum(_idx)
-            pred_counts = tf.cast(pred_counts, tf.float32)
+
+            pred_counts = tf.cast(tf.shape(_idx)[0], tf.float32)
 
             _squared_error = tf.square(gt_counts - pred_counts)
             _squared_error = tf.cast(_squared_error, tf.float32)            
