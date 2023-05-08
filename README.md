@@ -71,6 +71,8 @@ import numpy as np
 import scipy
 
 import albumentations as A
+from utils.aug import KeypointSafeRandomCrop
+
 import wandb
 from wandb.keras import WandbMetricsLogger, WandbEvalCallback
 
@@ -97,7 +99,7 @@ train_aug = A.Compose([
     A.RandomScale(scale_limit=(-0.3,0.3), always_apply=False, p=0.5),
     A.PadIfNeeded(min_height=128, min_width=128,
                     border_mode=0, p=1.0),
-    A.RandomCrop(width=128, height=128, always_apply=True),
+    KeypointSafeRandomCrop(width=128, height=128, always_apply=True),
 ], keypoint_params=A.KeypointParams(format='xy', label_fields=['class_labels']))
 
 val_aug = A.Compose([
