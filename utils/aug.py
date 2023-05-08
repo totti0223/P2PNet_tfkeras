@@ -39,8 +39,7 @@ class KeypointSafeRandomCrop(DualTransform):
             y_max = y_min + self.height
         ret = {"x_min": x_min, "x_max": x_max, "y_min": y_min, "y_max": y_max}
         return ret
-    # def apply_to_keypoint(self, keypoint, height=0, width=0, h_start=0, w_start=0, rows=0, cols=0):
-    #     return keypoint_random_crop(keypoint, height, width, h_start, w_start, rows,cols)
+    
     def apply_to_keypoint(self, keypoint, x_min, x_max, y_min, y_max,  **params):
         return crop_keypoint_by_coords(keypoint,
                                          crop_coords=(x_min, y_min, x_max, y_max))
