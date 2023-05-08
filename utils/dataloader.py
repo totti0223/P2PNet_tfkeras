@@ -78,16 +78,16 @@ class DataLoader(tf.keras.utils.Sequence):
 
         return padded_points, padded_classes
     
-    def keypointsafecrop(self, augmentations, image, t_point, t_class, depth=0, max_depth=5):
-        if depth > max_depth:
-            logger.debug("max depth reached")
-            return self.augmentations(image = image, keypoints = t_point, class_labels=t_class)
+    # def keypointsafecrop(self, augmentations, image, t_point, t_class, depth=0, max_depth=5):
+    #     if depth > max_depth:
+    #         logger.debug("max depth reached")
+    #         return self.augmentations(image = image, keypoints = t_point, class_labels=t_class)
         
-        transformed = self.augmentations(image = image, keypoints = t_point, class_labels=t_class)
-        if len(transformed['keypoints']) == 0:
-            #logger.debug("recursive bboxsafecrop")
-            return self.keypointsafecrop(augmentations, image, t_point, t_class, depth + 1, max_depth)
-        return transformed
+    #     transformed = self.augmentations(image = image, keypoints = t_point, class_labels=t_class)
+    #     if len(transformed['keypoints']) == 0:
+    #         #logger.debug("recursive bboxsafecrop")
+    #         return self.keypointsafecrop(augmentations, image, t_point, t_class, depth + 1, max_depth)
+    #     return transformed
 
     def __len__(self):
         return int(np.ceil(len(self.image_ids) / float(self.batch_size)))
@@ -110,7 +110,7 @@ class DataLoader(tf.keras.utils.Sequence):
             if not len(t_class):
                 t_class = np.array([[0]])
                 t_point = np.array([[0,0]])
-            # using A.compose, paste to padded image divisable by 128 if size is not divisable by 128
+            # paste to padded image divisable by 128 if image size is not divisable by 128
             # not using resize to avoid point coord conversion calculation
             if image.shape[0] % 128 != 0 or image.shape[1] % 128 != 0:
                 pad = np.ones((int(128 * (image.shape[0] // 128 + 1)), int(128 * (image.shape[1] // 128 + 1)), 3), dtype=np.uint8) * 255

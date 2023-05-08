@@ -288,7 +288,6 @@ print(preds)
 
 ## To do
 - Write custom WandbEvalCallback class to visualize validation output in browser.
-- Debug MSE metrics.
 - Implement nAP.
 - Keypoint safe random crop in albumentations.
 - Layerwise learning rate implementation.
@@ -347,7 +346,7 @@ print(preds)
 | Loss | L2; F.mse_loss and Cross Entropy Loss | L2 and Sparce Cross Entropy Loss |
 | Augmentation | - Random Scaling [0.7, 1.3]<br>- Random Crop [128,128]<br> - Random Horizontal Flip | Customizable through Albumentations library.
 | Data Source Format| ShanghaiTech .mat file<sup>1</sup> | COCO bbox format |
-| Metric | nAP, MAE, MSE | MAE (still buggy) |
+| Metric | nAP, MAE, MSE | MAE|
 | Other Hyperparameters |  | See table below |
 
 <sup>1</sup> A Dataloader for .mat file  https://github.com/TencentYoutuResearch/CrowdCounting-P2PNet/issues/8

@@ -1,40 +1,6 @@
 import tensorflow as tf
 from typing import Union,Dict,Tuple
 import numpy as np
-#from losses import hungarian_matcher
-# class P2PMAE(tf.keras.metrics.Metric):
-#     def __init__(self, **kwargs):
-#         super().__init__(name="p2pmae", **kwargs)
-#         self.mae_sum = tf.Variable(0.0, dtype=tf.float32)
-#         self.batch_count = tf.Variable(0, dtype=tf.int32)
-#         self.background_class = 0
-
-#     def update_state(self, y_true, y_pred, sample_weight=None):
-#         preds = y_pred[..., 2:]
-#         ground_truth = tf.cast(y_true[..., 2], tf.int32)
-        
-#         softmax_preds = tf.nn.softmax(preds, axis=-1)
-
-#         max_values = tf.reduce_max(softmax_preds, axis=-1)
-#         max_indices = tf.cast(tf.argmax(softmax_preds, axis=-1), tf.int32)
-#         idx = tf.where(tf.logical_and(max_indices != 0, max_values > 0.5))
-#         max_values = tf.gather_nd(max_values, idx)
-#         max_indices = tf.gather_nd(max_indices, idx)
-
-#         predicted_counts = tf.math.bincount(tf.reshape(max_indices, [-1]))[1:]  # ignore background class
-#         ground_truth_counts = tf.math.bincount(tf.reshape(ground_truth, [-1]))[1:]  # ignore background class
-        
-#         mae = tf.cast(tf.keras.losses.mean_absolute_error(ground_truth_counts, predicted_counts), tf.float32)
-#         self.mae_sum.assign_add(mae)
-#         self.batch_count.assign_add(1)
-
-#     def result(self):
-#         return self.mae_sum / tf.cast(self.batch_count, tf.float32)
-
-#     def reset_state(self):
-#         self.mae_sum.assign(0.0)
-#         self.batch_count.assign(0)
-        
 
 class P2PMAE(tf.keras.metrics.Metric):
     # single class only
