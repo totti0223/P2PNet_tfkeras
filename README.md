@@ -89,8 +89,9 @@ How to load SHHA dataset for example.
 ```python
 
 # Define your custom augmentation here.
-# Some image are small, so introduce PadIfNeeded prior to RandomCrop
-# 
+# Some image are small, so introduce PadIfNeeded prior to　Crop
+# Since randomcrop occasionally exclude all the keypoints (e.g. cropping the sky),
+# a custom crop algorithm KeypointSafeRandomCrop is implemented so that at least one keypoint will be present.
 
 train_aug = A.Compose([
     A.Blur(p=0.2),
