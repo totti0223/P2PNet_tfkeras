@@ -17,14 +17,13 @@ class KeypointSafeRandomCrop(DualTransform):
     
     def get_params_dependent_on_targets(self, params):
         img_h, img_w = params["image"].shape[:2]
-        
         random_keypoint = random.choice(params["keypoints"])
         x, y = random_keypoint[:2]
 
-        min_x = int(max(x - self.width, 0)) +1
-        min_y = int(max(y - self.height, 0)) +1
-        max_x = int(min(x, img_w - self.width)) -1
-        max_y = int(min(y, img_h - self.height)) -1
+        min_x = int(max(x - self.width, 0)) #+1
+        min_y = int(max(y - self.height, 0)) #+1
+        max_x = int(min(x, img_w - self.width)) #-1
+        max_y = int(min(y, img_h - self.height)) #-1
         if min_x >= max_x:
             x_min = min_x
             x_max = x_min + self.width

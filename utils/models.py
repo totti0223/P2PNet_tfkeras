@@ -109,7 +109,7 @@ class P2PNet(tf.keras.models.Model):
         self.cls_relu0 = tf.keras.layers.ReLU(name="cls_relu0")
         self.cls_head1 = tf.keras.layers.Conv2D(self.feature_size, 3, padding="same", name="cls_head1")
         self.cls_relu1 = tf.keras.layers.ReLU(name="cls_relu1")
-        self.cls_head2 = tf.keras.layers.Conv2D(self.no_classes * self.no_reference_points, 3, padding='same', name="clshead2")
+        self.cls_head2 = tf.keras.layers.Conv2D(self.no_classes * self.no_reference_points, 3, padding='same', name="cls_head2")
 
         # regression head
         self.reg_head0 = tf.keras.layers.Conv2D(self.feature_size, 3, padding="same", name="reg_head0")

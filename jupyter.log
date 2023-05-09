@@ -1,0 +1,1289 @@
+nohup: ignoring input
+[I 16:24:14.397 NotebookApp] Using EnvironmentKernelSpecManager...
+[I 16:24:14.397 NotebookApp] Started periodic updates of the kernel list (every 3 minutes).
+[I 16:24:14.761 NotebookApp] import tensorboard error, check tensorflow install
+[I 16:24:14.762 NotebookApp] jupyter_tensorboard extension loaded.
+[W 16:24:15.266 NotebookApp] Loading JupyterLab as a classic notebook (v6) extension.
+[W 2023-05-09 16:24:15.268 LabApp] 'allow_origin' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2023-05-09 16:24:15.268 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2023-05-09 16:24:15.268 LabApp] 'kernel_spec_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2023-05-09 16:24:15.268 LabApp] 'kernel_spec_manager_class' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2023-05-09 16:24:15.271 LabApp] JupyterLab extension loaded from /home/yosuke/anaconda3/lib/python3.10/site-packages/jupyterlab
+[I 2023-05-09 16:24:15.271 LabApp] JupyterLab application directory is /home/yosuke/anaconda3/share/jupyter/lab
+[I 16:24:16.465 NotebookApp] Serving notebooks from local directory: /home2/synthetic_seeds/2023/P2PNet_tfkeras
+[I 16:24:16.465 NotebookApp] Jupyter Notebook 6.5.2 is running at:
+[I 16:24:16.465 NotebookApp] http://yosuke-dlbox:8888/?token=35756306ac8aec887c89ec1156ca3311c03b1b9fe8c374d2
+[I 16:24:16.465 NotebookApp]  or http://127.0.0.1:8888/?token=35756306ac8aec887c89ec1156ca3311c03b1b9fe8c374d2
+[I 16:24:16.465 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:24:16.468 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/yosuke/.local/share/jupyter/runtime/nbserver-152344-open.html
+    Or copy and paste one of these URLs:
+        http://yosuke-dlbox:8888/?token=35756306ac8aec887c89ec1156ca3311c03b1b9fe8c374d2
+     or http://127.0.0.1:8888/?token=35756306ac8aec887c89ec1156ca3311c03b1b9fe8c374d2
+[I 16:24:16.469 NotebookApp] Starting initial scan of virtual environments...
+[I 16:24:17.986 NotebookApp] Found new kernels in environments: conda_anaconda3, conda_tf
+[W 16:24:24.283 NotebookApp] Forbidden
+[W 16:24:24.284 NotebookApp] 403 GET /api/kernels?1683617064272 (127.0.0.1) 1.430000ms referer=None
+[W 16:24:40.493 NotebookApp] Forbidden
+[W 16:24:40.494 NotebookApp] 403 GET /api/kernelspecs?1683617080482 (127.0.0.1) 1.600000ms referer=None
+[W 16:24:54.967 NotebookApp] Forbidden
+[W 16:24:54.968 NotebookApp] 403 GET /api/kernels?1683617094958 (127.0.0.1) 1.240000ms referer=None
+[W 16:25:07.800 NotebookApp] Forbidden
+[W 16:25:07.801 NotebookApp] 403 GET /api/sessions?1683617107792 (127.0.0.1) 1.220000ms referer=None
+[W 16:25:08.181 NotebookApp] Forbidden
+[W 16:25:08.181 NotebookApp] 403 GET /api/kernels?1683617108172 (127.0.0.1) 1.330000ms referer=None
+[W 16:25:36.140 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:36.140 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:36.283 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:36.283 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:36.289 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:36.289 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:39.971 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:39.972 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:39.978 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:39.978 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:39.981 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:39.981 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:40.005 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:40.005 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:40.009 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:40.010 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:40.015 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:40.015 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:40.017 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:40.017 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:40.023 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:40.023 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:53.412 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:53.412 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:53.419 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:53.419 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:53.422 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:53.422 NotebookApp] Kernelspec name conda_tf cannot be found!
+[I 16:25:53.429 NotebookApp] Creating new notebook in 
+[W 16:25:53.521 NotebookApp] Kernelspec name conda_tf cannot be found!
+[I 16:25:54.641 NotebookApp] Kernel started: cf7c7035-41e0-4da8-8b74-365f2c1c9774, name: conda_tf
+[W 16:25:54.667 NotebookApp] delete /sandbox-jvsc-39b2e7de-cd37-4c5f-94f8-e05d394a9d7dba37102a-ba17-4b66-ba7d-126f8b8b7fdd.ipynb
+[W 16:25:55.384 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:55.384 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:55.388 NotebookApp] Forbidden
+[W 16:25:55.388 NotebookApp] 403 GET /api/kernelspecs?1683617155351 (127.0.0.1) 2.160000ms referer=None
+[W 16:25:55.388 NotebookApp] Forbidden
+[W 16:25:55.389 NotebookApp] 403 GET /api/kernelspecs?1683617155354 (127.0.0.1) 2.400000ms referer=None
+[W 16:25:55.389 NotebookApp] Forbidden
+[W 16:25:55.389 NotebookApp] 403 GET /api/kernelspecs?1683617155357 (127.0.0.1) 2.660000ms referer=None
+[W 16:25:55.389 NotebookApp] Forbidden
+[W 16:25:55.390 NotebookApp] 403 GET /api/kernelspecs?1683617155359 (127.0.0.1) 2.920000ms referer=None
+[W 16:25:55.390 NotebookApp] Forbidden
+[W 16:25:55.390 NotebookApp] 403 GET /api/kernels?1683617155360 (127.0.0.1) 3.190000ms referer=None
+[W 16:25:55.390 NotebookApp] Forbidden
+[W 16:25:55.391 NotebookApp] 403 GET /api/kernels?1683617155362 (127.0.0.1) 3.490000ms referer=None
+[W 16:25:55.394 NotebookApp] Forbidden
+[W 16:25:55.394 NotebookApp] 403 GET /api/kernels?1683617155368 (127.0.0.1) 2.850000ms referer=None
+[W 16:25:55.394 NotebookApp] Forbidden
+[W 16:25:55.395 NotebookApp] 403 GET /api/sessions?1683617155369 (127.0.0.1) 3.060000ms referer=None
+[W 16:25:55.395 NotebookApp] Forbidden
+[W 16:25:55.395 NotebookApp] 403 GET /api/kernels?1683617155370 (127.0.0.1) 3.280000ms referer=None
+[W 16:25:55.395 NotebookApp] Forbidden
+[W 16:25:55.395 NotebookApp] 403 GET /api/sessions?1683617155372 (127.0.0.1) 3.480000ms referer=None
+[W 16:25:55.396 NotebookApp] Forbidden
+[W 16:25:55.396 NotebookApp] 403 GET /api/kernels?1683617155373 (127.0.0.1) 3.690000ms referer=None
+[W 16:25:55.396 NotebookApp] Forbidden
+[W 16:25:55.396 NotebookApp] 403 GET /api/kernels?1683617155375 (127.0.0.1) 3.890000ms referer=None
+[W 16:25:55.396 NotebookApp] Forbidden
+[W 16:25:55.396 NotebookApp] 403 GET /api/sessions?1683617155376 (127.0.0.1) 4.100000ms referer=None
+[W 16:25:55.398 NotebookApp] Forbidden
+[W 16:25:55.398 NotebookApp] 403 GET /api/sessions?1683617155378 (127.0.0.1) 1.310000ms referer=None
+[W 16:25:55.399 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:55.399 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:55.429 NotebookApp] Forbidden
+[W 16:25:55.429 NotebookApp] 403 GET /api/kernelspecs?1683617155391 (127.0.0.1) 2.270000ms referer=None
+[W 16:25:55.430 NotebookApp] Forbidden
+[W 16:25:55.430 NotebookApp] 403 GET /api/kernelspecs?1683617155396 (127.0.0.1) 2.590000ms referer=None
+[W 16:25:55.431 NotebookApp] Forbidden
+[W 16:25:55.431 NotebookApp] 403 GET /api/kernelspecs?1683617155399 (127.0.0.1) 2.960000ms referer=None
+[W 16:25:55.454 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:25:55.454 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:25:56.034 NotebookApp] Forbidden
+[W 16:25:56.035 NotebookApp] 403 GET /api/sessions?1683617156029 (127.0.0.1) 1.530000ms referer=None
+2023-05-09 16:25:56.611486: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-09 16:25:57.303695: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[W 16:26:00.501 NotebookApp] Forbidden
+[W 16:26:00.502 NotebookApp] 403 GET /api/sessions?1683617160496 (127.0.0.1) 1.320000ms referer=None
+[W 16:26:01.366 NotebookApp] Forbidden
+[W 16:26:01.367 NotebookApp] 403 GET /api/kernels?1683617161359 (127.0.0.1) 1.450000ms referer=None
+[W 16:26:02.454 NotebookApp] Forbidden
+[W 16:26:02.454 NotebookApp] 403 GET /api/sessions?1683617162448 (127.0.0.1) 1.470000ms referer=None
+[W 16:26:02.799 NotebookApp] Forbidden
+[W 16:26:02.800 NotebookApp] 403 GET /api/kernelspecs?1683617162794 (127.0.0.1) 1.350000ms referer=None
+[W 16:26:03.550 NotebookApp] Forbidden
+[W 16:26:03.550 NotebookApp] 403 GET /api/kernels?1683617163545 (127.0.0.1) 1.290000ms referer=None
+[W 16:26:12.160 NotebookApp] Forbidden
+[W 16:26:12.161 NotebookApp] 403 GET /api/kernelspecs?1683617172151 (127.0.0.1) 1.610000ms referer=None
+[W 16:26:12.303 NotebookApp] Forbidden
+[W 16:26:12.304 NotebookApp] 403 GET /api/kernels?1683617172298 (127.0.0.1) 1.330000ms referer=None
+[W 16:26:12.715 NotebookApp] Forbidden
+[W 16:26:12.715 NotebookApp] 403 GET /api/sessions?1683617172710 (127.0.0.1) 1.340000ms referer=None
+[W 16:26:12.958 NotebookApp] Forbidden
+[W 16:26:12.959 NotebookApp] 403 GET /api/sessions?1683617172953 (127.0.0.1) 1.290000ms referer=None
+[W 16:26:21.625 NotebookApp] Forbidden
+[W 16:26:21.625 NotebookApp] 403 GET /api/kernels?1683617181620 (127.0.0.1) 1.760000ms referer=None
+[W 16:26:25.195 NotebookApp] Forbidden
+[W 16:26:25.196 NotebookApp] 403 GET /api/kernels?1683617185190 (127.0.0.1) 1.420000ms referer=None
+[W 16:26:29.174 NotebookApp] Forbidden
+[W 16:26:29.175 NotebookApp] 403 GET /api/kernels?1683617189165 (127.0.0.1) 1.580000ms referer=None
+[W 16:26:31.068 NotebookApp] Forbidden
+[W 16:26:31.069 NotebookApp] 403 GET /api/kernelspecs?1683617191061 (127.0.0.1) 1.370000ms referer=None
+[W 16:26:33.280 NotebookApp] Forbidden
+[W 16:26:33.280 NotebookApp] 403 GET /api/sessions?1683617193273 (127.0.0.1) 1.680000ms referer=None
+[W 16:26:35.579 NotebookApp] Forbidden
+[W 16:26:35.579 NotebookApp] 403 GET /api/sessions?1683617195573 (127.0.0.1) 0.970000ms referer=None
+[W 16:26:41.029 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:26:41.029 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:26:50.183 NotebookApp] Forbidden
+[W 16:26:50.183 NotebookApp] 403 GET /api/sessions?1683617210178 (127.0.0.1) 1.260000ms referer=None
+[W 16:26:54.431 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:26:54.431 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:26:54.816 NotebookApp] Forbidden
+[W 16:26:54.816 NotebookApp] 403 GET /api/kernelspecs?1683617214810 (127.0.0.1) 0.930000ms referer=None
+[W 16:27:04.600 NotebookApp] Forbidden
+[W 16:27:04.600 NotebookApp] 403 GET /api/kernelspecs?1683617224592 (127.0.0.1) 1.360000ms referer=None
+[W 16:27:07.970 NotebookApp] Forbidden
+[W 16:27:07.971 NotebookApp] 403 GET /api/kernels?1683617227965 (127.0.0.1) 1.380000ms referer=None
+[W 16:27:09.961 NotebookApp] Forbidden
+[W 16:27:09.961 NotebookApp] 403 GET /api/sessions?1683617229954 (127.0.0.1) 1.420000ms referer=None
+[W 16:27:16.145 NotebookApp] Forbidden
+[W 16:27:16.146 NotebookApp] 403 GET /api/kernels?1683617236139 (127.0.0.1) 1.380000ms referer=None
+[W 16:27:23.052 NotebookApp] Forbidden
+[W 16:27:23.052 NotebookApp] 403 GET /api/kernelspecs?1683617243045 (127.0.0.1) 1.330000ms referer=None
+[W 16:27:29.609 NotebookApp] Forbidden
+[W 16:27:29.609 NotebookApp] 403 GET /api/sessions?1683617249602 (127.0.0.1) 1.680000ms referer=None
+[W 16:27:41.572 NotebookApp] Forbidden
+[W 16:27:41.573 NotebookApp] 403 GET /api/kernelspecs?1683617261565 (127.0.0.1) 1.550000ms referer=None
+[W 16:27:42.036 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:27:42.036 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:27:42.922 NotebookApp] Forbidden
+[W 16:27:42.923 NotebookApp] 403 GET /api/sessions?1683617262917 (127.0.0.1) 1.580000ms referer=None
+[W 16:27:43.574 NotebookApp] Forbidden
+[W 16:27:43.575 NotebookApp] 403 GET /api/kernels?1683617263571 (127.0.0.1) 1.480000ms referer=None
+[W 16:27:47.007 NotebookApp] Forbidden
+[W 16:27:47.008 NotebookApp] 403 GET /api/sessions?1683617267000 (127.0.0.1) 1.510000ms referer=None
+[W 16:27:55.438 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:27:55.439 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:27:59.710 NotebookApp] Forbidden
+[W 16:27:59.711 NotebookApp] 403 GET /api/sessions?1683617279704 (127.0.0.1) 1.600000ms referer=None
+[W 16:28:02.765 NotebookApp] Forbidden
+[W 16:28:02.766 NotebookApp] 403 GET /api/sessions?1683617282758 (127.0.0.1) 1.560000ms referer=None
+[W 16:28:07.126 NotebookApp] Forbidden
+[W 16:28:07.127 NotebookApp] 403 GET /api/sessions?1683617287118 (127.0.0.1) 1.510000ms referer=None
+[W 16:28:18.501 NotebookApp] Forbidden
+[W 16:28:18.502 NotebookApp] 403 GET /api/sessions?1683617298495 (127.0.0.1) 0.680000ms referer=None
+[W 16:28:29.245 NotebookApp] Forbidden
+[W 16:28:29.246 NotebookApp] 403 GET /api/sessions?1683617309240 (127.0.0.1) 1.340000ms referer=None
+[W 16:28:38.394 NotebookApp] Forbidden
+[W 16:28:38.394 NotebookApp] 403 GET /api/kernels?1683617318388 (127.0.0.1) 1.260000ms referer=None
+[W 16:28:43.045 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:28:43.045 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:28:44.130 NotebookApp] Forbidden
+[W 16:28:44.131 NotebookApp] 403 GET /api/sessions?1683617324125 (127.0.0.1) 1.680000ms referer=None
+[W 16:28:44.896 NotebookApp] Forbidden
+[W 16:28:44.896 NotebookApp] 403 GET /api/kernels?1683617324891 (127.0.0.1) 0.720000ms referer=None
+[W 16:28:47.285 NotebookApp] Forbidden
+[W 16:28:47.285 NotebookApp] 403 GET /api/kernelspecs?1683617327279 (127.0.0.1) 1.460000ms referer=None
+[W 16:28:47.869 NotebookApp] Forbidden
+[W 16:28:47.870 NotebookApp] 403 GET /api/sessions?1683617327863 (127.0.0.1) 1.350000ms referer=None
+[W 16:28:54.431 NotebookApp] Forbidden
+[W 16:28:54.432 NotebookApp] 403 GET /api/kernels?1683617334424 (127.0.0.1) 1.580000ms referer=None
+[W 16:28:56.447 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:28:56.447 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:29:02.230 NotebookApp] Forbidden
+[W 16:29:02.231 NotebookApp] 403 GET /api/sessions?1683617342225 (127.0.0.1) 1.280000ms referer=None
+[W 16:29:09.035 NotebookApp] Forbidden
+[W 16:29:09.035 NotebookApp] 403 GET /api/kernelspecs?1683617349030 (127.0.0.1) 1.390000ms referer=None
+[W 16:29:20.832 NotebookApp] Forbidden
+[W 16:29:20.832 NotebookApp] 403 GET /api/sessions?1683617360825 (127.0.0.1) 1.320000ms referer=None
+[W 16:29:33.715 NotebookApp] Forbidden
+[W 16:29:33.716 NotebookApp] 403 GET /api/sessions?1683617373709 (127.0.0.1) 0.800000ms referer=None
+[W 16:29:44.056 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:29:44.056 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:29:44.421 NotebookApp] Forbidden
+[W 16:29:44.422 NotebookApp] 403 GET /api/kernels?1683617384414 (127.0.0.1) 1.330000ms referer=None
+[W 16:29:49.528 NotebookApp] Forbidden
+[W 16:29:49.529 NotebookApp] 403 GET /api/sessions?1683617389521 (127.0.0.1) 1.330000ms referer=None
+[W 16:29:57.456 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:29:57.457 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:30:22.487 NotebookApp] Forbidden
+[W 16:30:22.488 NotebookApp] 403 GET /api/sessions?1683617422480 (127.0.0.1) 1.260000ms referer=None
+[W 16:30:27.441 NotebookApp] Forbidden
+[W 16:30:27.441 NotebookApp] 403 GET /api/sessions?1683617427436 (127.0.0.1) 1.340000ms referer=None
+2023-05-09 16:30:31.557853: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 15348 MB memory:  -> device: 0, name: Quadro GP100, pci bus id: 0000:05:00.0, compute capability: 6.0
+2023-05-09 16:30:31.558399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 15348 MB memory:  -> device: 1, name: Quadro GP100, pci bus id: 0000:06:00.0, compute capability: 6.0
+2023-05-09 16:30:31.558832: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 15348 MB memory:  -> device: 2, name: Quadro GP100, pci bus id: 0000:09:00.0, compute capability: 6.0
+2023-05-09 16:30:31.559332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /job:localhost/replica:0/task:0/device:GPU:3 with 15319 MB memory:  -> device: 3, name: Quadro GP100, pci bus id: 0000:0a:00.0, compute capability: 6.0
+[W 16:30:34.023 NotebookApp] Forbidden
+[W 16:30:34.024 NotebookApp] 403 GET /api/sessions?1683617434018 (127.0.0.1) 1.090000ms referer=None
+[W 16:30:45.065 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:30:45.065 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:30:46.239 NotebookApp] Forbidden
+[W 16:30:46.239 NotebookApp] 403 GET /api/kernels?1683617446233 (127.0.0.1) 1.340000ms referer=None
+[W 16:30:51.829 NotebookApp] Forbidden
+[W 16:30:51.829 NotebookApp] 403 GET /api/sessions?1683617451823 (127.0.0.1) 1.480000ms referer=None
+[W 16:30:53.401 NotebookApp] Forbidden
+[W 16:30:53.402 NotebookApp] 403 GET /api/sessions?1683617453395 (127.0.0.1) 1.550000ms referer=None
+[W 16:30:56.876 NotebookApp] Forbidden
+[W 16:30:56.877 NotebookApp] 403 GET /api/kernelspecs?1683617456869 (127.0.0.1) 1.780000ms referer=None
+[W 16:30:58.467 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:30:58.467 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:31:01.431 NotebookApp] Forbidden
+[W 16:31:01.432 NotebookApp] 403 GET /api/sessions?1683617461425 (127.0.0.1) 1.460000ms referer=None
+2023-05-09 16:31:20.282858: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:424] Loaded cuDNN version 8600
+2023-05-09 16:31:21.457025: I tensorflow/core/common_runtime/executor.cc:1197] [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
+	 [[{{node Placeholder/_0}}]]
+2023-05-09 16:31:30.031949: I tensorflow/compiler/xla/service/service.cc:169] XLA service 0x7fcaf5f01080 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2023-05-09 16:31:30.031992: I tensorflow/compiler/xla/service/service.cc:177]   StreamExecutor device (0): Quadro GP100, Compute Capability 6.0
+2023-05-09 16:31:30.032009: I tensorflow/compiler/xla/service/service.cc:177]   StreamExecutor device (1): Quadro GP100, Compute Capability 6.0
+2023-05-09 16:31:30.032014: I tensorflow/compiler/xla/service/service.cc:177]   StreamExecutor device (2): Quadro GP100, Compute Capability 6.0
+2023-05-09 16:31:30.032020: I tensorflow/compiler/xla/service/service.cc:177]   StreamExecutor device (3): Quadro GP100, Compute Capability 6.0
+2023-05-09 16:31:30.127452: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2023-05-09 16:31:30.680105: I ./tensorflow/compiler/jit/device_compiler.h:180] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+[I 16:31:32.059 NotebookApp] Kernel interrupted: cf7c7035-41e0-4da8-8b74-365f2c1c9774
+[W 16:31:36.651 NotebookApp] Forbidden
+[W 16:31:36.652 NotebookApp] 403 GET /api/sessions?1683617496646 (127.0.0.1) 1.400000ms referer=None
+[W 16:31:37.288 NotebookApp] Forbidden
+[W 16:31:37.288 NotebookApp] 403 GET /api/kernelspecs?1683617497282 (127.0.0.1) 1.570000ms referer=None
+[W 16:31:38.607 NotebookApp] Forbidden
+[W 16:31:38.608 NotebookApp] 403 GET /api/kernels?1683617498602 (127.0.0.1) 1.600000ms referer=None
+[W 16:31:46.074 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:31:46.074 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:31:51.577 NotebookApp] Forbidden
+[W 16:31:51.577 NotebookApp] 403 GET /api/sessions?1683617511570 (127.0.0.1) 1.500000ms referer=None
+[W 16:31:55.347 NotebookApp] Forbidden
+[W 16:31:55.348 NotebookApp] 403 GET /api/kernels?1683617515341 (127.0.0.1) 1.640000ms referer=None
+2023-05-09 16:31:56.323092: I tensorflow/core/common_runtime/executor.cc:1197] [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
+	 [[{{node Placeholder/_0}}]]
+[W 16:31:59.477 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:31:59.477 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:32:40.849 NotebookApp] Forbidden
+[W 16:32:40.849 NotebookApp] 403 GET /api/sessions?1683617560842 (127.0.0.1) 1.430000ms referer=None
+[W 16:32:42.662 NotebookApp] Forbidden
+[W 16:32:42.662 NotebookApp] 403 GET /api/kernelspecs?1683617562656 (127.0.0.1) 1.270000ms referer=None
+[W 16:32:44.390 NotebookApp] Forbidden
+[W 16:32:44.390 NotebookApp] 403 GET /api/kernels?1683617564384 (127.0.0.1) 1.390000ms referer=None
+[W 16:32:45.749 NotebookApp] Forbidden
+[W 16:32:45.750 NotebookApp] 403 GET /api/kernelspecs?1683617565744 (127.0.0.1) 0.830000ms referer=None
+[W 16:32:47.012 NotebookApp] Forbidden
+[W 16:32:47.012 NotebookApp] 403 GET /api/sessions?1683617567009 (127.0.0.1) 0.860000ms referer=None
+[W 16:32:47.082 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:32:47.082 NotebookApp] Kernelspec name conda_tf cannot be found!
+2023-05-09 16:32:52.847184: I tensorflow/core/common_runtime/executor.cc:1197] [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
+	 [[{{node Placeholder/_0}}]]
+[W 16:33:00.487 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:33:00.487 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:33:08.990 NotebookApp] Forbidden
+[W 16:33:08.990 NotebookApp] 403 GET /api/kernels?1683617588984 (127.0.0.1) 1.410000ms referer=None
+[W 16:33:31.461 NotebookApp] Forbidden
+[W 16:33:31.462 NotebookApp] 403 GET /api/sessions?1683617611457 (127.0.0.1) 1.190000ms referer=None
+2023-05-09 16:33:42.496278: I tensorflow/core/common_runtime/executor.cc:1197] [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
+	 [[{{node Placeholder/_0}}]]
+[W 16:33:44.694 NotebookApp] Forbidden
+[W 16:33:44.695 NotebookApp] 403 GET /api/kernelspecs?1683617624688 (127.0.0.1) 1.410000ms referer=None
+[W 16:33:48.092 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:33:48.092 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:34:01.493 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:34:01.493 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:34:09.041 NotebookApp] Forbidden
+[W 16:34:09.042 NotebookApp] 403 GET /api/kernelspecs?1683617649036 (127.0.0.1) 1.400000ms referer=None
+[W 16:34:39.244 NotebookApp] Forbidden
+[W 16:34:39.245 NotebookApp] 403 GET /api/kernelspecs?1683617679239 (127.0.0.1) 1.470000ms referer=None
+[W 16:34:49.101 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:34:49.102 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:34:53.199 NotebookApp] Forbidden
+[W 16:34:53.199 NotebookApp] 403 GET /api/sessions?1683617693194 (127.0.0.1) 0.950000ms referer=None
+[W 16:35:02.502 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:35:02.502 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:35:35.932 NotebookApp] Forbidden
+[W 16:35:35.932 NotebookApp] 403 GET /api/sessions?1683617735927 (127.0.0.1) 0.850000ms referer=None
+[W 16:35:46.511 NotebookApp] Forbidden
+[W 16:35:46.512 NotebookApp] 403 GET /api/sessions?1683617746506 (127.0.0.1) 1.400000ms referer=None
+[W 16:35:50.112 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:35:50.112 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:36:03.509 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:36:03.509 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:36:15.951 NotebookApp] Forbidden
+[W 16:36:15.952 NotebookApp] 403 GET /api/sessions?1683617774827 (127.0.0.1) 1.420000ms referer=None
+[W 16:36:38.613 NotebookApp] Forbidden
+[W 16:36:38.614 NotebookApp] 403 GET /api/kernels?1683617798609 (127.0.0.1) 1.270000ms referer=None
+[W 16:36:51.122 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:36:51.122 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:36:54.872 NotebookApp] Forbidden
+[W 16:36:54.872 NotebookApp] 403 GET /api/sessions?1683617814866 (127.0.0.1) 0.940000ms referer=None
+[W 16:36:55.355 NotebookApp] Forbidden
+[W 16:36:55.356 NotebookApp] 403 GET /api/kernels?1683617815349 (127.0.0.1) 0.750000ms referer=None
+[W 16:36:56.677 NotebookApp] Forbidden
+[W 16:36:56.678 NotebookApp] 403 GET /api/kernelspecs?1683617816671 (127.0.0.1) 1.530000ms referer=None
+[W 16:37:00.039 NotebookApp] Forbidden
+[W 16:37:00.039 NotebookApp] 403 GET /api/sessions?1683617820032 (127.0.0.1) 1.000000ms referer=None
+[W 16:37:04.518 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:37:04.518 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:37:34.714 NotebookApp] Forbidden
+[W 16:37:34.715 NotebookApp] 403 GET /api/kernels?1683617854709 (127.0.0.1) 1.500000ms referer=None
+[W 16:37:43.469 NotebookApp] Forbidden
+[W 16:37:43.470 NotebookApp] 403 GET /api/sessions?1683617863463 (127.0.0.1) 1.420000ms referer=None
+[W 16:37:43.844 NotebookApp] Forbidden
+[W 16:37:43.845 NotebookApp] 403 GET /api/sessions?1683617863835 (127.0.0.1) 0.860000ms referer=None
+[W 16:37:44.397 NotebookApp] Forbidden
+[W 16:37:44.398 NotebookApp] 403 GET /api/kernels?1683617864392 (127.0.0.1) 1.000000ms referer=None
+[W 16:37:47.018 NotebookApp] Forbidden
+[W 16:37:47.018 NotebookApp] 403 GET /api/sessions?1683617867013 (127.0.0.1) 0.880000ms referer=None
+[W 16:37:52.132 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:37:52.133 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:38:05.527 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:38:05.527 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:38:34.789 NotebookApp] Forbidden
+[W 16:38:34.790 NotebookApp] 403 GET /api/sessions?1683617914783 (127.0.0.1) 1.440000ms referer=None
+[W 16:38:44.698 NotebookApp] Forbidden
+[W 16:38:44.699 NotebookApp] 403 GET /api/kernelspecs?1683617924695 (127.0.0.1) 0.940000ms referer=None
+[W 16:38:53.144 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:38:53.144 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:39:06.535 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:39:06.535 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:39:09.047 NotebookApp] Forbidden
+[W 16:39:09.047 NotebookApp] 403 GET /api/kernelspecs?1683617949043 (127.0.0.1) 1.140000ms referer=None
+[W 16:39:32.677 NotebookApp] Forbidden
+[W 16:39:32.677 NotebookApp] 403 GET /api/sessions?1683617972672 (127.0.0.1) 0.950000ms referer=None
+[W 16:39:38.979 NotebookApp] Forbidden
+[W 16:39:38.980 NotebookApp] 403 GET /api/sessions?1683617978975 (127.0.0.1) 0.960000ms referer=None
+[W 16:39:39.251 NotebookApp] Forbidden
+[W 16:39:39.252 NotebookApp] 403 GET /api/kernelspecs?1683617979246 (127.0.0.1) 1.480000ms referer=None
+[W 16:39:54.152 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:39:54.152 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:40:07.543 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:40:07.543 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:40:17.193 NotebookApp] Forbidden
+[W 16:40:17.194 NotebookApp] 403 GET /api/sessions?1683618017187 (127.0.0.1) 1.320000ms referer=None
+[W 16:40:34.405 NotebookApp] Forbidden
+[W 16:40:34.405 NotebookApp] 403 GET /api/sessions?1683618034402 (127.0.0.1) 0.700000ms referer=None
+[W 16:40:55.159 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:40:55.159 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:41:08.550 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:41:08.550 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:41:38.619 NotebookApp] Forbidden
+[W 16:41:38.619 NotebookApp] 403 GET /api/kernels?1683618098615 (127.0.0.1) 0.770000ms referer=None
+[W 16:41:55.362 NotebookApp] Forbidden
+[W 16:41:55.363 NotebookApp] 403 GET /api/kernels?1683618115356 (127.0.0.1) 1.680000ms referer=None
+[W 16:41:56.167 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:41:56.168 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:41:56.684 NotebookApp] Forbidden
+[W 16:41:56.684 NotebookApp] 403 GET /api/kernelspecs?1683618116678 (127.0.0.1) 1.460000ms referer=None
+[W 16:41:56.697 NotebookApp] Forbidden
+[W 16:41:56.698 NotebookApp] 403 GET /api/sessions?1683618116693 (127.0.0.1) 1.360000ms referer=None
+[W 16:42:06.569 NotebookApp] Forbidden
+[W 16:42:06.570 NotebookApp] 403 GET /api/kernels?1683618126564 (127.0.0.1) 0.660000ms referer=None
+[W 16:42:09.558 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:42:09.558 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:42:31.927 NotebookApp] Forbidden
+[W 16:42:31.927 NotebookApp] 403 GET /api/sessions?1683618151922 (127.0.0.1) 0.920000ms referer=None
+[W 16:42:34.721 NotebookApp] Forbidden
+[W 16:42:34.721 NotebookApp] 403 GET /api/kernels?1683618154716 (127.0.0.1) 1.200000ms referer=None
+[W 16:42:41.789 NotebookApp] Forbidden
+[W 16:42:41.789 NotebookApp] 403 GET /api/kernelspecs?1683618161783 (127.0.0.1) 0.930000ms referer=None
+[W 16:42:43.952 NotebookApp] Forbidden
+[W 16:42:43.952 NotebookApp] 403 GET /api/sessions?1683618163945 (127.0.0.1) 1.270000ms referer=None
+[W 16:42:49.052 NotebookApp] Forbidden
+[W 16:42:49.052 NotebookApp] 403 GET /api/sessions?1683618169045 (127.0.0.1) 1.010000ms referer=None
+[W 16:42:57.173 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:42:57.173 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:43:03.863 NotebookApp] Forbidden
+[W 16:43:03.863 NotebookApp] 403 GET /api/sessions?1683618183859 (127.0.0.1) 1.060000ms referer=None
+[W 16:43:10.565 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:43:10.565 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:43:31.887 NotebookApp] Forbidden
+[W 16:43:31.887 NotebookApp] 403 GET /api/sessions?1683618211881 (127.0.0.1) 1.460000ms referer=None
+[W 16:43:44.705 NotebookApp] Forbidden
+[W 16:43:44.705 NotebookApp] 403 GET /api/kernelspecs?1683618224699 (127.0.0.1) 1.090000ms referer=None
+[W 16:43:53.915 NotebookApp] Forbidden
+[W 16:43:53.916 NotebookApp] 403 GET /api/sessions?1683618233911 (127.0.0.1) 1.260000ms referer=None
+[W 16:43:58.182 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:43:58.183 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:44:11.575 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:44:11.575 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:44:24.191 NotebookApp] Forbidden
+[W 16:44:24.191 NotebookApp] 403 GET /api/sessions?1683618264185 (127.0.0.1) 1.580000ms referer=None
+[W 16:44:39.256 NotebookApp] Forbidden
+[W 16:44:39.257 NotebookApp] 403 GET /api/kernelspecs?1683618279252 (127.0.0.1) 0.920000ms referer=None
+[W 16:44:49.863 NotebookApp] Forbidden
+[W 16:44:49.863 NotebookApp] 403 GET /api/sessions?1683618289857 (127.0.0.1) 1.020000ms referer=None
+[W 16:44:58.968 NotebookApp] Forbidden
+[W 16:44:58.968 NotebookApp] 403 GET /api/sessions?1683618298962 (127.0.0.1) 1.320000ms referer=None
+[W 16:44:59.191 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:44:59.192 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:45:12.582 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:45:12.582 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:45:59.777 NotebookApp] Forbidden
+[W 16:45:59.777 NotebookApp] 403 GET /api/kernels?1683618359772 (127.0.0.1) 1.200000ms referer=None
+[W 16:46:00.199 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:46:00.199 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:46:13.589 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:46:13.590 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:46:38.625 NotebookApp] Forbidden
+[W 16:46:38.626 NotebookApp] 403 GET /api/kernels?1683618398620 (127.0.0.1) 1.060000ms referer=None
+[W 16:46:44.855 NotebookApp] Forbidden
+[W 16:46:44.855 NotebookApp] 403 GET /api/sessions?1683618404849 (127.0.0.1) 1.300000ms referer=None
+[W 16:46:55.367 NotebookApp] Forbidden
+[W 16:46:55.368 NotebookApp] 403 GET /api/kernels?1683618415363 (127.0.0.1) 1.060000ms referer=None
+[W 16:46:56.691 NotebookApp] Forbidden
+[W 16:46:56.691 NotebookApp] 403 GET /api/kernelspecs?1683618416685 (127.0.0.1) 0.980000ms referer=None
+[W 16:46:56.702 NotebookApp] Forbidden
+[W 16:46:56.703 NotebookApp] 403 GET /api/sessions?1683618416698 (127.0.0.1) 1.180000ms referer=None
+[W 16:46:57.579 NotebookApp] Forbidden
+[W 16:46:57.579 NotebookApp] 403 GET /api/sessions?1683618417574 (127.0.0.1) 0.970000ms referer=None
+[W 16:47:01.208 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:47:01.208 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:47:14.597 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:47:14.597 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:47:34.726 NotebookApp] Forbidden
+[W 16:47:34.727 NotebookApp] 403 GET /api/kernels?1683618454722 (127.0.0.1) 0.780000ms referer=None
+[W 16:47:41.796 NotebookApp] Forbidden
+[W 16:47:41.796 NotebookApp] 403 GET /api/kernelspecs?1683618461790 (127.0.0.1) 1.440000ms referer=None
+[W 16:48:02.216 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:48:02.216 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:48:15.983 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:48:15.983 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:48:25.523 NotebookApp] Forbidden
+[W 16:48:25.524 NotebookApp] 403 GET /api/kernels?1683618505517 (127.0.0.1) 1.700000ms referer=None
+[W 16:48:42.542 NotebookApp] Forbidden
+[W 16:48:42.542 NotebookApp] 403 GET /api/sessions?1683618522536 (127.0.0.1) 1.530000ms referer=None
+[W 16:48:44.714 NotebookApp] Forbidden
+[W 16:48:44.714 NotebookApp] 403 GET /api/kernelspecs?1683618524707 (127.0.0.1) 1.490000ms referer=None
+[W 16:49:03.225 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:49:03.225 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:49:16.991 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:49:16.992 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:49:39.264 NotebookApp] Forbidden
+[W 16:49:39.264 NotebookApp] 403 GET /api/kernelspecs?1683618579258 (127.0.0.1) 1.020000ms referer=None
+[W 16:50:04.234 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:50:04.234 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:50:18.000 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:50:18.000 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:50:36.087 NotebookApp] Forbidden
+[W 16:50:36.088 NotebookApp] 403 GET /api/kernels?1683618636081 (127.0.0.1) 1.520000ms referer=None
+[W 16:50:59.783 NotebookApp] Forbidden
+[W 16:50:59.784 NotebookApp] 403 GET /api/kernels?1683618659777 (127.0.0.1) 1.590000ms referer=None
+[W 16:51:05.240 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:51:05.240 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:51:16.153 NotebookApp] Forbidden
+[W 16:51:16.153 NotebookApp] 403 GET /api/kernels?1683618675502 (127.0.0.1) 1.640000ms referer=None
+[W 16:51:19.007 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:51:19.007 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:51:35.257 NotebookApp] Forbidden
+[W 16:51:35.258 NotebookApp] 403 GET /api/kernels?1683618695251 (127.0.0.1) 1.970000ms referer=None
+[W 16:51:44.861 NotebookApp] Forbidden
+[W 16:51:44.862 NotebookApp] 403 GET /api/sessions?1683618704856 (127.0.0.1) 0.920000ms referer=None
+[W 16:51:55.373 NotebookApp] Forbidden
+[W 16:51:55.374 NotebookApp] 403 GET /api/kernels?1683618715368 (127.0.0.1) 0.960000ms referer=None
+[W 16:51:56.697 NotebookApp] Forbidden
+[W 16:51:56.697 NotebookApp] 403 GET /api/kernelspecs?1683618716693 (127.0.0.1) 0.880000ms referer=None
+[W 16:51:56.707 NotebookApp] Forbidden
+[W 16:51:56.707 NotebookApp] 403 GET /api/sessions?1683618716703 (127.0.0.1) 0.890000ms referer=None
+[W 16:51:57.585 NotebookApp] Forbidden
+[W 16:51:57.585 NotebookApp] 403 GET /api/sessions?1683618717580 (127.0.0.1) 0.990000ms referer=None
+[W 16:52:06.251 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:52:06.252 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:52:07.282 NotebookApp] Forbidden
+[W 16:52:07.282 NotebookApp] 403 GET /api/kernelspecs?1683618727278 (127.0.0.1) 0.710000ms referer=None
+[W 16:52:20.017 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:52:20.017 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:52:23.952 NotebookApp] Forbidden
+[W 16:52:23.953 NotebookApp] 403 GET /api/kernels?1683618743948 (127.0.0.1) 1.180000ms referer=None
+[W 16:52:34.733 NotebookApp] Forbidden
+[W 16:52:34.734 NotebookApp] 403 GET /api/kernels?1683618754727 (127.0.0.1) 1.230000ms referer=None
+[W 16:52:41.802 NotebookApp] Forbidden
+[W 16:52:41.803 NotebookApp] 403 GET /api/kernelspecs?1683618761797 (127.0.0.1) 1.970000ms referer=None
+[W 16:53:07.257 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:53:07.258 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:53:14.945 NotebookApp] Forbidden
+[W 16:53:14.945 NotebookApp] 403 GET /api/sessions?1683618794939 (127.0.0.1) 1.560000ms referer=None
+[W 16:53:21.028 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:53:21.028 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:53:31.865 NotebookApp] Forbidden
+[W 16:53:31.866 NotebookApp] 403 GET /api/kernels?1683618811861 (127.0.0.1) 1.390000ms referer=None
+[W 16:53:44.720 NotebookApp] Forbidden
+[W 16:53:44.720 NotebookApp] 403 GET /api/kernelspecs?1683618824715 (127.0.0.1) 1.070000ms referer=None
+2023-05-09 16:53:46.694160: W tensorflow/core/framework/op_kernel.cc:1818] INVALID_ARGUMENT: ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 647, in get_index
+    return _SHARED_SEQUENCES[uid][i]
+  File "/home2/synthetic_seeds/2023/P2PNet_tfkeras/utils/dataloader.py", line 106, in __getitem__
+    transformed = self.augmentations(image = image, keypoints = t_point, class_labels=t_class)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/composition.py", line 205, in __call__
+    data = t(**data)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/transforms_interface.py", line 118, in __call__
+    return self.apply_with_params(params, **kwargs)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/transforms_interface.py", line 131, in apply_with_params
+    res[key] = target_function(arg, **dict(params, **target_dependencies))
+  File "/home2/synthetic_seeds/2023/P2PNet_tfkeras/utils/aug.py", line 16, in apply
+    return crop(img, x_min=x_min, y_min=y_min, x_max=x_max, y_max=y_max)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/augmentations/crops/functional.py", line 200, in crop
+    raise ValueError(
+ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+"""
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/ops/script_ops.py", line 267, in __call__
+    ret = func(*args)
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/autograph/impl/api.py", line 642, in wrapper
+    return func(*args, **kwargs)
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/data/ops/from_generator_op.py", line 198, in generator_py_func
+    values = next(generator_state.get_iterator(iterator_id))
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/engine/data_adapter.py", line 902, in wrapped_generator
+    for data in generator_fn():
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 870, in get
+    raise e
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 861, in get
+    inputs = self.queue.get(block=True, timeout=5).get()
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+
+ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+
+
+2023-05-09 16:53:46.694225: I tensorflow/core/common_runtime/executor.cc:1197] [/job:localhost/replica:0/task:0/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 647, in get_index
+    return _SHARED_SEQUENCES[uid][i]
+  File "/home2/synthetic_seeds/2023/P2PNet_tfkeras/utils/dataloader.py", line 106, in __getitem__
+    transformed = self.augmentations(image = image, keypoints = t_point, class_labels=t_class)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/composition.py", line 205, in __call__
+    data = t(**data)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/transforms_interface.py", line 118, in __call__
+    return self.apply_with_params(params, **kwargs)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/transforms_interface.py", line 131, in apply_with_params
+    res[key] = target_function(arg, **dict(params, **target_dependencies))
+  File "/home2/synthetic_seeds/2023/P2PNet_tfkeras/utils/aug.py", line 16, in apply
+    return crop(img, x_min=x_min, y_min=y_min, x_max=x_max, y_max=y_max)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/augmentations/crops/functional.py", line 200, in crop
+    raise ValueError(
+ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+"""
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/ops/script_ops.py", line 267, in __call__
+    ret = func(*args)
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/autograph/impl/api.py", line 642, in wrapper
+    return func(*args, **kwargs)
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/data/ops/from_generator_op.py", line 198, in generator_py_func
+    values = next(generator_state.get_iterator(iterator_id))
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/engine/data_adapter.py", line 902, in wrapped_generator
+    for data in generator_fn():
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 870, in get
+    raise e
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 861, in get
+    inputs = self.queue.get(block=True, timeout=5).get()
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+
+ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+
+
+	 [[{{node PyFunc}}]]
+2023-05-09 16:53:46.756476: I tensorflow/core/common_runtime/executor.cc:1197] [/job:localhost/replica:0/task:0/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 647, in get_index
+    return _SHARED_SEQUENCES[uid][i]
+  File "/home2/synthetic_seeds/2023/P2PNet_tfkeras/utils/dataloader.py", line 106, in __getitem__
+    transformed = self.augmentations(image = image, keypoints = t_point, class_labels=t_class)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/composition.py", line 205, in __call__
+    data = t(**data)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/transforms_interface.py", line 118, in __call__
+    return self.apply_with_params(params, **kwargs)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/transforms_interface.py", line 131, in apply_with_params
+    res[key] = target_function(arg, **dict(params, **target_dependencies))
+  File "/home2/synthetic_seeds/2023/P2PNet_tfkeras/utils/aug.py", line 16, in apply
+    return crop(img, x_min=x_min, y_min=y_min, x_max=x_max, y_max=y_max)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/augmentations/crops/functional.py", line 200, in crop
+    raise ValueError(
+ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+"""
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/ops/script_ops.py", line 267, in __call__
+    ret = func(*args)
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/autograph/impl/api.py", line 642, in wrapper
+    return func(*args, **kwargs)
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/data/ops/from_generator_op.py", line 198, in generator_py_func
+    values = next(generator_state.get_iterator(iterator_id))
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/engine/data_adapter.py", line 902, in wrapped_generator
+    for data in generator_fn():
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 870, in get
+    raise e
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 861, in get
+    inputs = self.queue.get(block=True, timeout=5).get()
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+
+ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+
+
+	 [[{{node PyFunc}}]]
+	 [[IteratorGetNext]]
+2023-05-09 16:53:46.756591: I tensorflow/core/common_runtime/executor.cc:1197] [/job:localhost/replica:0/task:0/device:GPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 647, in get_index
+    return _SHARED_SEQUENCES[uid][i]
+  File "/home2/synthetic_seeds/2023/P2PNet_tfkeras/utils/dataloader.py", line 106, in __getitem__
+    transformed = self.augmentations(image = image, keypoints = t_point, class_labels=t_class)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/composition.py", line 205, in __call__
+    data = t(**data)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/transforms_interface.py", line 118, in __call__
+    return self.apply_with_params(params, **kwargs)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/core/transforms_interface.py", line 131, in apply_with_params
+    res[key] = target_function(arg, **dict(params, **target_dependencies))
+  File "/home2/synthetic_seeds/2023/P2PNet_tfkeras/utils/aug.py", line 16, in apply
+    return crop(img, x_min=x_min, y_min=y_min, x_max=x_max, y_max=y_max)
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/albumentations/augmentations/crops/functional.py", line 200, in crop
+    raise ValueError(
+ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+"""
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/ops/script_ops.py", line 267, in __call__
+    ret = func(*args)
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/autograph/impl/api.py", line 642, in wrapper
+    return func(*args, **kwargs)
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/tensorflow/python/data/ops/from_generator_op.py", line 198, in generator_py_func
+    values = next(generator_state.get_iterator(iterator_id))
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/engine/data_adapter.py", line 902, in wrapped_generator
+    for data in generator_fn():
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 870, in get
+    raise e
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/site-packages/keras/utils/data_utils.py", line 861, in get
+    inputs = self.queue.get(block=True, timeout=5).get()
+
+  File "/home/yosuke/anaconda3/envs/tf/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+
+ValueError: Values for crop should be non negative and equal or smaller than image sizes(x_min = 66, y_min = 1, x_max = 194, y_max = 129, height = 128, width = 325)
+
+
+	 [[{{node PyFunc}}]]
+	 [[IteratorGetNext]]
+	 [[IteratorGetNext/_14]]
+[W 16:54:08.267 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:54:08.267 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:54:21.587 NotebookApp] Forbidden
+[W 16:54:21.588 NotebookApp] 403 GET /api/kernels?1683618861581 (127.0.0.1) 1.350000ms referer=None
+[W 16:54:22.038 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:54:22.038 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:54:29.577 NotebookApp] Forbidden
+[W 16:54:29.577 NotebookApp] 403 GET /api/kernels?1683618869571 (127.0.0.1) 0.820000ms referer=None
+[W 16:55:09.277 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:55:09.277 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:55:23.048 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:55:23.048 NotebookApp] Kernelspec name conda_tf cannot be found!
+[I 16:55:23.722 NotebookApp] Kernel restarted: cf7c7035-41e0-4da8-8b74-365f2c1c9774
+[I 16:55:23.727 NotebookApp] Starting buffering for cf7c7035-41e0-4da8-8b74-365f2c1c9774:d2df0606-4c21-4102-b5b6-dd7f5cba3653
+[I 16:55:23.738 NotebookApp] Restoring connection for cf7c7035-41e0-4da8-8b74-365f2c1c9774:d2df0606-4c21-4102-b5b6-dd7f5cba3653
+[W 16:55:36.095 NotebookApp] Forbidden
+[W 16:55:36.096 NotebookApp] 403 GET /api/kernels?1683618936089 (127.0.0.1) 1.300000ms referer=None
+[W 16:55:36.137 NotebookApp] Forbidden
+[W 16:55:36.138 NotebookApp] 403 GET /api/kernels?1683618936132 (127.0.0.1) 1.260000ms referer=None
+[W 16:56:10.285 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:56:10.285 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:56:12.021 NotebookApp] Forbidden
+[W 16:56:12.021 NotebookApp] 403 GET /api/kernels?1683618972016 (127.0.0.1) 1.300000ms referer=None
+[W 16:56:24.057 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:56:24.058 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:56:28.567 NotebookApp] Forbidden
+[W 16:56:28.567 NotebookApp] 403 GET /api/kernels?1683618988560 (127.0.0.1) 1.330000ms referer=None
+[W 16:56:28.703 NotebookApp] Forbidden
+[W 16:56:28.703 NotebookApp] 403 GET /api/sessions?1683618988697 (127.0.0.1) 1.290000ms referer=None
+[W 16:56:29.081 NotebookApp] Forbidden
+[W 16:56:29.081 NotebookApp] 403 GET /api/kernels?1683618989075 (127.0.0.1) 1.280000ms referer=None
+[W 16:56:56.707 NotebookApp] Forbidden
+[W 16:56:56.707 NotebookApp] 403 GET /api/kernelspecs?1683619016698 (127.0.0.1) 1.260000ms referer=None
+[W 16:56:56.713 NotebookApp] Forbidden
+[W 16:56:56.713 NotebookApp] 403 GET /api/sessions?1683619016708 (127.0.0.1) 0.870000ms referer=None
+[W 16:56:57.591 NotebookApp] Forbidden
+[W 16:56:57.592 NotebookApp] 403 GET /api/sessions?1683619017586 (127.0.0.1) 1.310000ms referer=None
+[W 16:57:07.290 NotebookApp] Forbidden
+[W 16:57:07.291 NotebookApp] 403 GET /api/kernelspecs?1683619027284 (127.0.0.1) 1.120000ms referer=None
+[W 16:57:11.296 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:57:11.296 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:57:16.938 NotebookApp] Forbidden
+[W 16:57:16.939 NotebookApp] 403 GET /api/kernels?1683619036931 (127.0.0.1) 1.490000ms referer=None
+[W 16:57:17.378 NotebookApp] Forbidden
+[W 16:57:17.378 NotebookApp] 403 GET /api/sessions?1683619037372 (127.0.0.1) 1.250000ms referer=None
+[W 16:57:25.067 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:57:25.068 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:57:34.743 NotebookApp] Forbidden
+[W 16:57:34.744 NotebookApp] 403 GET /api/kernels?1683619054736 (127.0.0.1) 1.320000ms referer=None
+[W 16:57:41.811 NotebookApp] Forbidden
+[W 16:57:41.811 NotebookApp] 403 GET /api/kernelspecs?1683619061805 (127.0.0.1) 1.320000ms referer=None
+[W 16:57:47.549 NotebookApp] Forbidden
+[W 16:57:47.549 NotebookApp] 403 GET /api/sessions?1683619067544 (127.0.0.1) 1.160000ms referer=None
+[W 16:58:10.169 NotebookApp] Forbidden
+[W 16:58:10.170 NotebookApp] 403 GET /api/kernels?1683619090163 (127.0.0.1) 1.300000ms referer=None
+[W 16:58:12.305 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:58:12.306 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:58:26.076 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:58:26.077 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:58:44.729 NotebookApp] Forbidden
+[W 16:58:44.730 NotebookApp] 403 GET /api/kernelspecs?1683619124722 (127.0.0.1) 1.400000ms referer=None
+[W 16:58:52.886 NotebookApp] Forbidden
+[W 16:58:52.886 NotebookApp] 403 GET /api/sessions?1683619132880 (127.0.0.1) 1.190000ms referer=None
+[W 16:58:54.340 NotebookApp] Forbidden
+[W 16:58:54.340 NotebookApp] 403 GET /api/kernels?1683619134333 (127.0.0.1) 1.300000ms referer=None
+[W 16:59:13.316 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:59:13.316 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:59:20.028 NotebookApp] Forbidden
+[W 16:59:20.029 NotebookApp] 403 GET /api/sessions?1683619160023 (127.0.0.1) 1.290000ms referer=None
+[W 16:59:27.086 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 16:59:27.086 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 16:59:32.493 NotebookApp] Forbidden
+[W 16:59:32.494 NotebookApp] 403 GET /api/sessions?1683619172489 (127.0.0.1) 0.820000ms referer=None
+[W 17:00:06.045 NotebookApp] Forbidden
+[W 17:00:06.046 NotebookApp] 403 GET /api/kernels?1683619206039 (127.0.0.1) 1.310000ms referer=None
+[W 17:00:14.327 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:00:14.327 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:00:19.650 NotebookApp] Forbidden
+[W 17:00:19.651 NotebookApp] 403 GET /api/sessions?1683619219646 (127.0.0.1) 1.430000ms referer=None
+[W 17:00:28.094 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:00:28.094 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:00:36.102 NotebookApp] Forbidden
+[W 17:00:36.103 NotebookApp] 403 GET /api/kernels?1683619236096 (127.0.0.1) 1.310000ms referer=None
+[W 17:01:15.335 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:01:15.335 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:01:21.439 NotebookApp] Forbidden
+[W 17:01:21.439 NotebookApp] 403 GET /api/sessions?1683619281434 (127.0.0.1) 1.060000ms referer=None
+[W 17:01:29.104 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:01:29.104 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:01:33.374 NotebookApp] Forbidden
+[W 17:01:33.375 NotebookApp] 403 GET /api/sessions?1683619293368 (127.0.0.1) 1.140000ms referer=None
+[W 17:01:42.798 NotebookApp] Forbidden
+[W 17:01:42.799 NotebookApp] 403 GET /api/sessions?1683619302793 (127.0.0.1) 1.270000ms referer=None
+[W 17:01:56.714 NotebookApp] Forbidden
+[W 17:01:56.715 NotebookApp] 403 GET /api/kernelspecs?1683619316708 (127.0.0.1) 1.180000ms referer=None
+[W 17:01:57.598 NotebookApp] Forbidden
+[W 17:01:57.599 NotebookApp] 403 GET /api/sessions?1683619317593 (127.0.0.1) 0.780000ms referer=None
+[W 17:02:06.825 NotebookApp] Forbidden
+[W 17:02:06.826 NotebookApp] 403 GET /api/sessions?1683619326819 (127.0.0.1) 1.210000ms referer=None
+[W 17:02:07.297 NotebookApp] Forbidden
+[W 17:02:07.297 NotebookApp] 403 GET /api/kernelspecs?1683619327291 (127.0.0.1) 1.270000ms referer=None
+[W 17:02:16.344 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:02:16.345 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:02:30.113 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:02:30.114 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:02:34.749 NotebookApp] Forbidden
+[W 17:02:34.750 NotebookApp] 403 GET /api/kernels?1683619354744 (127.0.0.1) 1.300000ms referer=None
+[W 17:02:39.932 NotebookApp] Forbidden
+[W 17:02:39.932 NotebookApp] 403 GET /api/kernels?1683619359926 (127.0.0.1) 1.270000ms referer=None
+[W 17:02:41.819 NotebookApp] Forbidden
+[W 17:02:41.820 NotebookApp] 403 GET /api/kernelspecs?1683619361813 (127.0.0.1) 1.320000ms referer=None
+[W 17:02:59.179 NotebookApp] Forbidden
+[W 17:02:59.180 NotebookApp] 403 GET /api/kernels?1683619379173 (127.0.0.1) 0.950000ms referer=None
+[W 17:03:17.355 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:03:17.356 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:03:24.359 NotebookApp] Forbidden
+[W 17:03:24.360 NotebookApp] 403 GET /api/sessions?1683619404355 (127.0.0.1) 0.810000ms referer=None
+[W 17:03:31.122 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:03:31.123 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:03:44.735 NotebookApp] Forbidden
+[W 17:03:44.736 NotebookApp] 403 GET /api/kernelspecs?1683619424731 (127.0.0.1) 1.320000ms referer=None
+[W 17:04:18.365 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:04:18.365 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:04:20.035 NotebookApp] Forbidden
+[W 17:04:20.036 NotebookApp] 403 GET /api/sessions?1683619460030 (127.0.0.1) 1.310000ms referer=None
+[W 17:04:32.132 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:04:32.133 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:05:19.375 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:05:19.375 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:05:33.142 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:05:33.143 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:05:36.110 NotebookApp] Forbidden
+[W 17:05:36.111 NotebookApp] 403 GET /api/kernels?1683619536104 (127.0.0.1) 0.990000ms referer=None
+[W 17:06:18.864 NotebookApp] Forbidden
+[W 17:06:18.865 NotebookApp] 403 GET /api/sessions?1683619578858 (127.0.0.1) 1.290000ms referer=None
+[W 17:06:20.384 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:06:20.384 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:06:34.152 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:06:34.152 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:06:34.898 NotebookApp] Forbidden
+[W 17:06:34.898 NotebookApp] 403 GET /api/sessions?1683619594891 (127.0.0.1) 1.380000ms referer=None
+[W 17:06:42.605 NotebookApp] Forbidden
+[W 17:06:42.606 NotebookApp] 403 GET /api/sessions?1683619602600 (127.0.0.1) 0.880000ms referer=None
+[W 17:06:56.722 NotebookApp] Forbidden
+[W 17:06:56.722 NotebookApp] 403 GET /api/kernelspecs?1683619616716 (127.0.0.1) 0.890000ms referer=None
+[W 17:06:57.603 NotebookApp] Forbidden
+[W 17:06:57.604 NotebookApp] 403 GET /api/sessions?1683619617599 (127.0.0.1) 0.850000ms referer=None
+[W 17:07:07.304 NotebookApp] Forbidden
+[W 17:07:07.305 NotebookApp] 403 GET /api/kernelspecs?1683619627299 (127.0.0.1) 1.240000ms referer=None
+[W 17:07:21.393 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:07:21.393 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:07:34.755 NotebookApp] Forbidden
+[W 17:07:34.756 NotebookApp] 403 GET /api/kernels?1683619654750 (127.0.0.1) 1.360000ms referer=None
+[W 17:07:35.161 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:07:35.162 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:07:39.940 NotebookApp] Forbidden
+[W 17:07:39.940 NotebookApp] 403 GET /api/kernels?1683619659934 (127.0.0.1) 1.290000ms referer=None
+[W 17:07:41.595 NotebookApp] Forbidden
+[W 17:07:41.596 NotebookApp] 403 GET /api/sessions?1683619661590 (127.0.0.1) 1.280000ms referer=None
+[W 17:07:41.826 NotebookApp] Forbidden
+[W 17:07:41.827 NotebookApp] 403 GET /api/kernelspecs?1683619661820 (127.0.0.1) 1.330000ms referer=None
+[W 17:07:59.186 NotebookApp] Forbidden
+[W 17:07:59.186 NotebookApp] 403 GET /api/kernels?1683619679180 (127.0.0.1) 0.880000ms referer=None
+[W 17:08:22.402 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:08:22.403 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:08:36.171 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:08:36.171 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:08:44.742 NotebookApp] Forbidden
+[W 17:08:44.742 NotebookApp] 403 GET /api/kernelspecs?1683619724737 (127.0.0.1) 0.970000ms referer=None
+[W 17:09:23.412 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:09:23.412 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:09:37.181 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:09:37.181 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:10:24.420 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:10:24.420 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:10:36.118 NotebookApp] Forbidden
+[W 17:10:36.118 NotebookApp] 403 GET /api/kernels?1683619836113 (127.0.0.1) 1.300000ms referer=None
+[W 17:10:38.189 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:10:38.189 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:10:47.258 NotebookApp] Forbidden
+[W 17:10:47.259 NotebookApp] 403 GET /api/sessions?1683619847251 (127.0.0.1) 1.380000ms referer=None
+[W 17:11:18.870 NotebookApp] Forbidden
+[W 17:11:18.871 NotebookApp] 403 GET /api/sessions?1683619878865 (127.0.0.1) 0.950000ms referer=None
+[W 17:11:25.428 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:11:25.428 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:11:39.199 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:11:39.200 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:11:42.614 NotebookApp] Forbidden
+[W 17:11:42.614 NotebookApp] 403 GET /api/sessions?1683619902608 (127.0.0.1) 0.880000ms referer=None
+[W 17:11:56.727 NotebookApp] Forbidden
+[W 17:11:56.728 NotebookApp] 403 GET /api/kernelspecs?1683619916722 (127.0.0.1) 0.760000ms referer=None
+[W 17:11:57.611 NotebookApp] Forbidden
+[W 17:11:57.611 NotebookApp] 403 GET /api/sessions?1683619917606 (127.0.0.1) 0.940000ms referer=None
+[W 17:12:07.313 NotebookApp] Forbidden
+[W 17:12:07.314 NotebookApp] 403 GET /api/kernelspecs?1683619927306 (127.0.0.1) 1.430000ms referer=None
+[W 17:12:18.676 NotebookApp] Forbidden
+[W 17:12:18.677 NotebookApp] 403 GET /api/kernels?1683619938670 (127.0.0.1) 1.300000ms referer=None
+[W 17:12:22.337 NotebookApp] Forbidden
+[W 17:12:22.337 NotebookApp] 403 GET /api/kernelspecs?1683619942332 (127.0.0.1) 0.950000ms referer=None
+[W 17:12:26.438 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:12:26.438 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:12:34.763 NotebookApp] Forbidden
+[W 17:12:34.763 NotebookApp] 403 GET /api/kernels?1683619954757 (127.0.0.1) 1.310000ms referer=None
+[W 17:12:39.948 NotebookApp] Forbidden
+[W 17:12:39.948 NotebookApp] 403 GET /api/kernels?1683619959942 (127.0.0.1) 1.200000ms referer=None
+[W 17:12:40.208 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:12:40.208 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:12:41.832 NotebookApp] Forbidden
+[W 17:12:41.833 NotebookApp] 403 GET /api/kernelspecs?1683619961827 (127.0.0.1) 1.280000ms referer=None
+[W 17:12:59.193 NotebookApp] Forbidden
+[W 17:12:59.193 NotebookApp] 403 GET /api/kernels?1683619979187 (127.0.0.1) 1.310000ms referer=None
+[W 17:13:21.817 NotebookApp] Forbidden
+[W 17:13:21.817 NotebookApp] 403 GET /api/sessions?1683620001810 (127.0.0.1) 1.300000ms referer=None
+[W 17:13:27.447 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:13:27.447 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:13:41.215 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:13:41.215 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:14:00.566 NotebookApp] Forbidden
+[W 17:14:00.567 NotebookApp] 403 GET /api/sessions?1683620040562 (127.0.0.1) 1.370000ms referer=None
+[W 17:14:13.795 NotebookApp] Forbidden
+[W 17:14:13.796 NotebookApp] 403 GET /api/sessions?1683620053790 (127.0.0.1) 0.760000ms referer=None
+[W 17:14:28.454 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:14:28.455 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:14:42.224 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:14:42.224 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:14:48.828 NotebookApp] Forbidden
+[W 17:14:48.828 NotebookApp] 403 GET /api/kernels?1683620088822 (127.0.0.1) 1.310000ms referer=None
+[W 17:14:57.328 NotebookApp] Forbidden
+[W 17:14:57.328 NotebookApp] 403 GET /api/sessions?1683620097322 (127.0.0.1) 1.260000ms referer=None
+[W 17:15:29.463 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:15:29.463 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:15:43.233 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:15:43.233 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:15:59.171 NotebookApp] Forbidden
+[W 17:15:59.172 NotebookApp] 403 GET /api/sessions?1683620159166 (127.0.0.1) 1.320000ms referer=None
+[W 17:16:01.179 NotebookApp] Forbidden
+[W 17:16:01.180 NotebookApp] 403 GET /api/kernels?1683620161174 (127.0.0.1) 1.300000ms referer=None
+[W 17:16:18.876 NotebookApp] Forbidden
+[W 17:16:18.877 NotebookApp] 403 GET /api/sessions?1683620178871 (127.0.0.1) 1.300000ms referer=None
+[W 17:16:19.037 NotebookApp] Forbidden
+[W 17:16:19.037 NotebookApp] 403 GET /api/kernelspecs?1683620179031 (127.0.0.1) 1.280000ms referer=None
+[W 17:16:30.471 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:16:30.471 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:16:34.310 NotebookApp] Forbidden
+[W 17:16:34.310 NotebookApp] 403 GET /api/kernels?1683620194306 (127.0.0.1) 1.280000ms referer=None
+[W 17:16:44.243 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:16:44.243 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:16:56.732 NotebookApp] Forbidden
+[W 17:16:56.733 NotebookApp] 403 GET /api/kernelspecs?1683620216728 (127.0.0.1) 0.970000ms referer=None
+[W 17:16:57.618 NotebookApp] Forbidden
+[W 17:16:57.618 NotebookApp] 403 GET /api/sessions?1683620217612 (127.0.0.1) 0.860000ms referer=None
+[W 17:17:07.320 NotebookApp] Forbidden
+[W 17:17:07.320 NotebookApp] 403 GET /api/kernelspecs?1683620227314 (127.0.0.1) 1.310000ms referer=None
+[W 17:17:15.791 NotebookApp] Forbidden
+[W 17:17:15.792 NotebookApp] 403 GET /api/kernels?1683620235786 (127.0.0.1) 1.050000ms referer=None
+[W 17:17:17.712 NotebookApp] Forbidden
+[W 17:17:17.713 NotebookApp] 403 GET /api/kernels?1683620237707 (127.0.0.1) 1.270000ms referer=None
+[W 17:17:22.343 NotebookApp] Forbidden
+[W 17:17:22.344 NotebookApp] 403 GET /api/kernelspecs?1683620242338 (127.0.0.1) 1.300000ms referer=None
+[W 17:17:31.481 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:17:31.482 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:17:34.769 NotebookApp] Forbidden
+[W 17:17:34.769 NotebookApp] 403 GET /api/kernels?1683620254764 (127.0.0.1) 1.270000ms referer=None
+[W 17:17:43.877 NotebookApp] Forbidden
+[W 17:17:43.878 NotebookApp] 403 GET /api/kernels?1683620263872 (127.0.0.1) 1.320000ms referer=None
+[W 17:17:45.253 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:17:45.254 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:17:59.200 NotebookApp] Forbidden
+[W 17:17:59.201 NotebookApp] 403 GET /api/kernels?1683620279194 (127.0.0.1) 1.040000ms referer=None
+[W 17:18:24.219 NotebookApp] Forbidden
+[W 17:18:24.219 NotebookApp] 403 GET /api/sessions?1683620304214 (127.0.0.1) 1.320000ms referer=None
+[W 17:18:30.352 NotebookApp] Forbidden
+[W 17:18:30.353 NotebookApp] 403 GET /api/kernels?1683620310347 (127.0.0.1) 0.830000ms referer=None
+[W 17:18:32.490 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:18:32.490 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:18:46.263 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:18:46.264 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:19:00.574 NotebookApp] Forbidden
+[W 17:19:00.575 NotebookApp] 403 GET /api/sessions?1683620340568 (127.0.0.1) 1.350000ms referer=None
+[W 17:19:33.498 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:19:33.499 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:19:47.273 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:19:47.273 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:19:49.490 NotebookApp] Forbidden
+[W 17:19:49.490 NotebookApp] 403 GET /api/kernels?1683620389484 (127.0.0.1) 0.670000ms referer=None
+[W 17:20:15.531 NotebookApp] Forbidden
+[W 17:20:15.532 NotebookApp] 403 GET /api/kernels?1683620415526 (127.0.0.1) 0.970000ms referer=None
+[W 17:20:24.540 NotebookApp] Forbidden
+[W 17:20:24.540 NotebookApp] 403 GET /api/kernels?1683620424534 (127.0.0.1) 1.330000ms referer=None
+[W 17:20:34.509 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:20:34.509 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:20:48.282 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:20:48.282 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:21:18.883 NotebookApp] Forbidden
+[W 17:21:18.884 NotebookApp] 403 GET /api/sessions?1683620478877 (127.0.0.1) 1.330000ms referer=None
+[W 17:21:19.044 NotebookApp] Forbidden
+[W 17:21:19.044 NotebookApp] 403 GET /api/kernelspecs?1683620479038 (127.0.0.1) 1.160000ms referer=None
+[W 17:21:35.519 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:21:35.519 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:21:49.290 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:21:49.290 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:21:56.739 NotebookApp] Forbidden
+[W 17:21:56.739 NotebookApp] 403 GET /api/kernelspecs?1683620516733 (127.0.0.1) 1.340000ms referer=None
+[W 17:21:57.623 NotebookApp] Forbidden
+[W 17:21:57.624 NotebookApp] 403 GET /api/sessions?1683620517619 (127.0.0.1) 1.220000ms referer=None
+[W 17:22:07.326 NotebookApp] Forbidden
+[W 17:22:07.327 NotebookApp] 403 GET /api/kernelspecs?1683620527322 (127.0.0.1) 1.060000ms referer=None
+[W 17:22:22.351 NotebookApp] Forbidden
+[W 17:22:22.351 NotebookApp] 403 GET /api/kernelspecs?1683620542344 (127.0.0.1) 1.360000ms referer=None
+[W 17:22:34.776 NotebookApp] Forbidden
+[W 17:22:34.777 NotebookApp] 403 GET /api/kernels?1683620554771 (127.0.0.1) 1.060000ms referer=None
+[W 17:22:36.527 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:22:36.527 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:22:50.298 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:22:50.298 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:23:24.225 NotebookApp] Forbidden
+[W 17:23:24.226 NotebookApp] 403 GET /api/sessions?1683620604221 (127.0.0.1) 1.320000ms referer=None
+[W 17:23:30.543 NotebookApp] Forbidden
+[W 17:23:30.543 NotebookApp] 403 GET /api/kernels?1683620610536 (127.0.0.1) 1.310000ms referer=None
+[W 17:23:37.537 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:23:37.538 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:23:51.308 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:23:51.308 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:24:00.583 NotebookApp] Forbidden
+[W 17:24:00.583 NotebookApp] 403 GET /api/sessions?1683620640576 (127.0.0.1) 1.310000ms referer=None
+[W 17:24:15.939 NotebookApp] Forbidden
+[W 17:24:15.939 NotebookApp] 403 GET /api/kernels?1683620654587 (127.0.0.1) 1.000000ms referer=None
+[W 17:24:21.482 NotebookApp] Forbidden
+[W 17:24:21.482 NotebookApp] 403 GET /api/kernels?1683620661475 (127.0.0.1) 1.280000ms referer=None
+[W 17:24:38.547 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:24:38.547 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:24:48.392 NotebookApp] Forbidden
+[W 17:24:48.393 NotebookApp] 403 GET /api/kernelspecs?1683620688388 (127.0.0.1) 1.430000ms referer=None
+[W 17:24:52.314 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:24:52.314 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:25:39.555 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:25:39.555 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:25:53.322 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:25:53.322 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:26:18.891 NotebookApp] Forbidden
+[W 17:26:18.891 NotebookApp] 403 GET /api/sessions?1683620778884 (127.0.0.1) 1.350000ms referer=None
+[W 17:26:32.532 NotebookApp] Forbidden
+[W 17:26:32.533 NotebookApp] 403 GET /api/kernels?1683620792526 (127.0.0.1) 1.300000ms referer=None
+[W 17:26:40.564 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:26:40.564 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:26:54.330 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:26:54.330 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:26:56.746 NotebookApp] Forbidden
+[W 17:26:56.747 NotebookApp] 403 GET /api/kernelspecs?1683620816740 (127.0.0.1) 1.310000ms referer=None
+[W 17:26:57.630 NotebookApp] Forbidden
+[W 17:26:57.631 NotebookApp] 403 GET /api/sessions?1683620817624 (127.0.0.1) 1.270000ms referer=None
+[W 17:27:07.333 NotebookApp] Forbidden
+[W 17:27:07.333 NotebookApp] 403 GET /api/kernelspecs?1683620827327 (127.0.0.1) 1.430000ms referer=None
+[W 17:27:11.283 NotebookApp] Forbidden
+[W 17:27:11.284 NotebookApp] 403 GET /api/kernels?1683620831277 (127.0.0.1) 1.500000ms referer=None
+[W 17:27:22.359 NotebookApp] Forbidden
+[W 17:27:22.360 NotebookApp] 403 GET /api/kernelspecs?1683620842353 (127.0.0.1) 1.410000ms referer=None
+[W 17:27:34.782 NotebookApp] Forbidden
+[W 17:27:34.783 NotebookApp] 403 GET /api/kernels?1683620854778 (127.0.0.1) 1.330000ms referer=None
+[W 17:27:41.573 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:27:41.574 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:27:45.375 NotebookApp] Forbidden
+[W 17:27:45.376 NotebookApp] 403 GET /api/kernels?1683620865369 (127.0.0.1) 1.340000ms referer=None
+[W 17:27:55.339 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:27:55.339 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:28:24.231 NotebookApp] Forbidden
+[W 17:28:24.232 NotebookApp] 403 GET /api/sessions?1683620904226 (127.0.0.1) 1.460000ms referer=None
+[W 17:28:30.551 NotebookApp] Forbidden
+[W 17:28:30.552 NotebookApp] 403 GET /api/kernels?1683620910545 (127.0.0.1) 1.300000ms referer=None
+[W 17:28:42.582 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:28:42.583 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:28:44.334 NotebookApp] Forbidden
+[W 17:28:44.334 NotebookApp] 403 GET /api/kernels?1683620924326 (127.0.0.1) 1.210000ms referer=None
+[W 17:28:55.524 NotebookApp] Forbidden
+[W 17:28:55.524 NotebookApp] 403 GET /api/kernels?1683620935518 (127.0.0.1) 0.970000ms referer=None
+[W 17:28:56.349 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:28:56.349 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:29:00.588 NotebookApp] Forbidden
+[W 17:29:00.588 NotebookApp] 403 GET /api/sessions?1683620940584 (127.0.0.1) 0.900000ms referer=None
+[W 17:29:15.947 NotebookApp] Forbidden
+[W 17:29:15.948 NotebookApp] 403 GET /api/kernels?1683620955941 (127.0.0.1) 1.260000ms referer=None
+[W 17:29:26.938 NotebookApp] Forbidden
+[W 17:29:26.939 NotebookApp] 403 GET /api/kernels?1683620966933 (127.0.0.1) 0.880000ms referer=None
+[W 17:29:43.592 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:29:43.593 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:29:48.400 NotebookApp] Forbidden
+[W 17:29:48.401 NotebookApp] 403 GET /api/kernelspecs?1683620988394 (127.0.0.1) 1.540000ms referer=None
+[W 17:29:57.357 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:29:57.357 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:30:04.375 NotebookApp] Forbidden
+[W 17:30:04.376 NotebookApp] 403 GET /api/kernels?1683621004370 (127.0.0.1) 1.350000ms referer=None
+[W 17:30:27.097 NotebookApp] Forbidden
+[W 17:30:27.098 NotebookApp] 403 GET /api/kernels?1683621027092 (127.0.0.1) 1.050000ms referer=None
+[W 17:30:38.580 NotebookApp] Forbidden
+[W 17:30:38.580 NotebookApp] 403 GET /api/kernels?1683621038573 (127.0.0.1) 1.630000ms referer=None
+[W 17:30:44.601 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:30:44.601 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:30:55.333 NotebookApp] Forbidden
+[W 17:30:55.334 NotebookApp] 403 GET /api/kernels?1683621055327 (127.0.0.1) 1.060000ms referer=None
+[W 17:30:58.367 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:30:58.367 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:31:05.925 NotebookApp] Forbidden
+[W 17:31:05.926 NotebookApp] 403 GET /api/kernels?1683621065922 (127.0.0.1) 1.030000ms referer=None
+[W 17:31:18.899 NotebookApp] Forbidden
+[W 17:31:18.899 NotebookApp] 403 GET /api/sessions?1683621078892 (127.0.0.1) 1.050000ms referer=None
+[W 17:31:32.905 NotebookApp] Forbidden
+[W 17:31:32.906 NotebookApp] 403 GET /api/kernels?1683621092900 (127.0.0.1) 1.390000ms referer=None
+[W 17:31:45.609 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:31:45.609 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:31:56.752 NotebookApp] Forbidden
+[W 17:31:56.753 NotebookApp] 403 GET /api/kernelspecs?1683621116748 (127.0.0.1) 1.340000ms referer=None
+[W 17:31:57.638 NotebookApp] Forbidden
+[W 17:31:57.639 NotebookApp] 403 GET /api/sessions?1683621117632 (127.0.0.1) 1.260000ms referer=None
+[W 17:31:59.377 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:31:59.377 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:32:01.400 NotebookApp] Forbidden
+[W 17:32:01.401 NotebookApp] 403 GET /api/kernels?1683621121394 (127.0.0.1) 1.590000ms referer=None
+[W 17:32:07.341 NotebookApp] Forbidden
+[W 17:32:07.341 NotebookApp] 403 GET /api/kernelspecs?1683621127334 (127.0.0.1) 1.090000ms referer=None
+[W 17:32:22.366 NotebookApp] Forbidden
+[W 17:32:22.366 NotebookApp] 403 GET /api/kernelspecs?1683621142360 (127.0.0.1) 1.320000ms referer=None
+[W 17:32:34.791 NotebookApp] Forbidden
+[W 17:32:34.792 NotebookApp] 403 GET /api/kernels?1683621154784 (127.0.0.1) 1.360000ms referer=None
+[W 17:32:46.620 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:32:46.620 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:33:00.391 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:33:00.391 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:33:24.069 NotebookApp] Forbidden
+[W 17:33:24.069 NotebookApp] 403 GET /api/kernels?1683621204064 (127.0.0.1) 1.310000ms referer=None
+[W 17:33:24.239 NotebookApp] Forbidden
+[W 17:33:24.240 NotebookApp] 403 GET /api/sessions?1683621204234 (127.0.0.1) 1.390000ms referer=None
+[W 17:33:30.562 NotebookApp] Forbidden
+[W 17:33:30.563 NotebookApp] 403 GET /api/kernels?1683621210552 (127.0.0.1) 1.300000ms referer=None
+[W 17:33:47.629 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:33:47.629 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:34:00.596 NotebookApp] Forbidden
+[W 17:34:00.596 NotebookApp] 403 GET /api/sessions?1683621240589 (127.0.0.1) 0.810000ms referer=None
+[W 17:34:01.401 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:34:01.402 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:34:15.956 NotebookApp] Forbidden
+[W 17:34:15.957 NotebookApp] 403 GET /api/kernels?1683621255949 (127.0.0.1) 1.340000ms referer=None
+[W 17:34:48.408 NotebookApp] Forbidden
+[W 17:34:48.409 NotebookApp] 403 GET /api/kernelspecs?1683621288402 (127.0.0.1) 1.330000ms referer=None
+[W 17:34:48.638 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:34:48.638 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:35:02.411 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:35:02.411 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:35:49.647 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:35:49.647 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:36:03.420 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:36:03.421 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:36:09.943 NotebookApp] Forbidden
+[W 17:36:09.944 NotebookApp] 403 GET /api/kernels?1683621369940 (127.0.0.1) 0.720000ms referer=None
+[W 17:36:18.908 NotebookApp] Forbidden
+[W 17:36:18.908 NotebookApp] 403 GET /api/sessions?1683621378901 (127.0.0.1) 1.550000ms referer=None
+[W 17:36:50.655 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:36:50.655 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:36:56.759 NotebookApp] Forbidden
+[W 17:36:56.760 NotebookApp] 403 GET /api/kernelspecs?1683621416753 (127.0.0.1) 1.280000ms referer=None
+[W 17:36:57.644 NotebookApp] Forbidden
+[W 17:36:57.645 NotebookApp] 403 GET /api/sessions?1683621417639 (127.0.0.1) 1.250000ms referer=None
+[W 17:37:04.430 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:37:04.431 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:37:07.133 NotebookApp] Forbidden
+[W 17:37:07.134 NotebookApp] 403 GET /api/kernelspecs?1683621427128 (127.0.0.1) 0.900000ms referer=None
+[W 17:37:07.347 NotebookApp] Forbidden
+[W 17:37:07.348 NotebookApp] 403 GET /api/kernelspecs?1683621427343 (127.0.0.1) 0.640000ms referer=None
+[W 17:37:22.373 NotebookApp] Forbidden
+[W 17:37:22.374 NotebookApp] 403 GET /api/kernelspecs?1683621442367 (127.0.0.1) 1.340000ms referer=None
+[W 17:37:29.374 NotebookApp] Forbidden
+[W 17:37:29.375 NotebookApp] 403 GET /api/kernels?1683621449369 (127.0.0.1) 1.320000ms referer=None
+[I 17:37:40.131 NotebookApp] Kernel restarted: cf7c7035-41e0-4da8-8b74-365f2c1c9774
+[I 17:37:40.136 NotebookApp] Starting buffering for cf7c7035-41e0-4da8-8b74-365f2c1c9774:d2df0606-4c21-4102-b5b6-dd7f5cba3653
+[I 17:37:40.146 NotebookApp] Restoring connection for cf7c7035-41e0-4da8-8b74-365f2c1c9774:d2df0606-4c21-4102-b5b6-dd7f5cba3653
+2023-05-09 17:37:45.123812: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-09 17:37:45.795755: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[W 17:37:51.663 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:37:51.663 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:38:05.440 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:38:05.440 NotebookApp] Kernelspec name conda_tf cannot be found!
+2023-05-09 17:38:06.469454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 15348 MB memory:  -> device: 0, name: Quadro GP100, pci bus id: 0000:05:00.0, compute capability: 6.0
+2023-05-09 17:38:06.470018: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 15348 MB memory:  -> device: 1, name: Quadro GP100, pci bus id: 0000:06:00.0, compute capability: 6.0
+2023-05-09 17:38:06.470517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 15348 MB memory:  -> device: 2, name: Quadro GP100, pci bus id: 0000:09:00.0, compute capability: 6.0
+2023-05-09 17:38:06.471006: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /job:localhost/replica:0/task:0/device:GPU:3 with 15319 MB memory:  -> device: 3, name: Quadro GP100, pci bus id: 0000:0a:00.0, compute capability: 6.0
+[W 17:38:24.249 NotebookApp] Forbidden
+[W 17:38:24.249 NotebookApp] 403 GET /api/sessions?1683621504242 (127.0.0.1) 1.550000ms referer=None
+[W 17:38:30.569 NotebookApp] Forbidden
+[W 17:38:30.570 NotebookApp] 403 GET /api/kernels?1683621510563 (127.0.0.1) 1.300000ms referer=None
+2023-05-09 17:38:46.041381: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:424] Loaded cuDNN version 8600
+2023-05-09 17:38:46.816656: I tensorflow/core/common_runtime/executor.cc:1197] [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
+	 [[{{node Placeholder/_0}}]]
+[W 17:38:52.675 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:38:52.675 NotebookApp] Kernelspec name conda_tf cannot be found!
+2023-05-09 17:38:55.111058: I tensorflow/compiler/xla/service/service.cc:169] XLA service 0x7f3a0178a100 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2023-05-09 17:38:55.111089: I tensorflow/compiler/xla/service/service.cc:177]   StreamExecutor device (0): Quadro GP100, Compute Capability 6.0
+2023-05-09 17:38:55.111105: I tensorflow/compiler/xla/service/service.cc:177]   StreamExecutor device (1): Quadro GP100, Compute Capability 6.0
+2023-05-09 17:38:55.111110: I tensorflow/compiler/xla/service/service.cc:177]   StreamExecutor device (2): Quadro GP100, Compute Capability 6.0
+2023-05-09 17:38:55.111115: I tensorflow/compiler/xla/service/service.cc:177]   StreamExecutor device (3): Quadro GP100, Compute Capability 6.0
+2023-05-09 17:38:55.116692: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2023-05-09 17:38:55.242253: I ./tensorflow/compiler/jit/device_compiler.h:180] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+[W 17:39:00.608 NotebookApp] Forbidden
+[W 17:39:00.609 NotebookApp] 403 GET /api/sessions?1683621540597 (127.0.0.1) 0.790000ms referer=None
+[W 17:39:06.452 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:39:06.452 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:39:11.384 NotebookApp] Forbidden
+[W 17:39:11.385 NotebookApp] 403 GET /api/sessions?1683621551379 (127.0.0.1) 1.090000ms referer=None
+[W 17:39:16.480 NotebookApp] Forbidden
+[W 17:39:16.480 NotebookApp] 403 GET /api/kernels?1683621555958 (127.0.0.1) 1.880000ms referer=None
+2023-05-09 17:39:41.174905: I tensorflow/core/common_runtime/executor.cc:1197] [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
+	 [[{{node Placeholder/_0}}]]
+[W 17:39:53.684 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:39:53.684 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:40:01.636 NotebookApp] Forbidden
+[W 17:40:01.636 NotebookApp] 403 GET /api/kernelspecs?1683621601631 (127.0.0.1) 1.400000ms referer=None
+[W 17:40:07.462 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:40:07.462 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:40:22.354 NotebookApp] Forbidden
+[W 17:40:22.354 NotebookApp] 403 GET /api/sessions?1683621622349 (127.0.0.1) 1.440000ms referer=None
+2023-05-09 17:40:32.114549: I tensorflow/core/common_runtime/executor.cc:1197] [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
+	 [[{{node Placeholder/_0}}]]
+[W 17:40:39.435 NotebookApp] Forbidden
+[W 17:40:39.436 NotebookApp] 403 GET /api/sessions?1683621639430 (127.0.0.1) 1.290000ms referer=None
+[W 17:40:42.058 NotebookApp] Forbidden
+[W 17:40:42.059 NotebookApp] 403 GET /api/kernels?1683621642053 (127.0.0.1) 0.990000ms referer=None
+[W 17:40:49.802 NotebookApp] Forbidden
+[W 17:40:49.802 NotebookApp] 403 GET /api/sessions?1683621649797 (127.0.0.1) 1.080000ms referer=None
+[W 17:40:54.692 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:40:54.692 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:41:08.470 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:41:08.470 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:41:09.949 NotebookApp] Forbidden
+[W 17:41:09.949 NotebookApp] 403 GET /api/kernels?1683621669944 (127.0.0.1) 1.400000ms referer=None
+[W 17:41:13.484 NotebookApp] Forbidden
+[W 17:41:13.484 NotebookApp] 403 GET /api/sessions?1683621673479 (127.0.0.1) 1.340000ms referer=None
+[W 17:41:17.074 NotebookApp] Forbidden
+[W 17:41:17.075 NotebookApp] 403 GET /api/kernelspecs?1683621677068 (127.0.0.1) 1.500000ms referer=None
+[W 17:41:18.917 NotebookApp] Forbidden
+[W 17:41:18.918 NotebookApp] 403 GET /api/sessions?1683621678909 (127.0.0.1) 1.350000ms referer=None
+[W 17:41:21.474 NotebookApp] Forbidden
+[W 17:41:21.475 NotebookApp] 403 GET /api/kernels?1683621681468 (127.0.0.1) 1.100000ms referer=None
+[W 17:41:39.125 NotebookApp] Forbidden
+[W 17:41:39.126 NotebookApp] 403 GET /api/kernelspecs?1683621699119 (127.0.0.1) 0.870000ms referer=None
+[W 17:41:55.702 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:41:55.702 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:41:58.407 NotebookApp] Forbidden
+[W 17:41:58.408 NotebookApp] 403 GET /api/sessions?1683621718400 (127.0.0.1) 1.580000ms referer=None
+[W 17:42:07.352 NotebookApp] Forbidden
+[W 17:42:07.352 NotebookApp] 403 GET /api/kernelspecs?1683621727348 (127.0.0.1) 0.960000ms referer=None
+[W 17:42:09.478 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:42:09.478 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:42:29.380 NotebookApp] Forbidden
+[W 17:42:29.380 NotebookApp] 403 GET /api/kernels?1683621749376 (127.0.0.1) 0.770000ms referer=None
+[W 17:42:56.707 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:42:56.708 NotebookApp] Kernelspec name conda_tf cannot be found!
+[W 17:43:10.487 NotebookApp] Kernelspec name conda_anaconda3 cannot be found!
+[W 17:43:10.487 NotebookApp] Kernelspec name conda_tf cannot be found!
