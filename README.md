@@ -1,5 +1,5 @@
 # tf.keras implementation of P2PNet
-- This repository contains codes for P2PNet Crowd Counting implemented in tensorflow.keras. *(UNDER DEVELOPMENT)*. 
+- This repository contains codes for P2PNet Crowd Counting implemented in tensorflow.keras. *(UNDER DEVELOPMENT)*.
 - See [P2PNet Paper in arxiv](https://arxiv.org/abs/2107.12746) for details
 - The code is prepared for easy backbone and FPN replacement.
 
@@ -141,7 +141,7 @@ for images, y_trues in train_dt:
     break
 ```
 - The dataloader inherits the tf.keras.utils.Sequence class utilizing pycocotools.
-- Outputs 
+- Outputs
   - Image (batch, height, width, channel)
     - To handle batch, image size must be the same.
     - Image size must be divisable by 128. (more exactly, divisable by stride ex. 8 by default)
@@ -166,7 +166,7 @@ print(y_trues)
 Implemented via tf.keras.models.Model class.
 ```python
 K.clear_session()
-# Since I determine the output layer of backbone by the model name, 
+# Since I determine the output layer of backbone by the model name,
 # must clear the session before loading the model to ensure proper loading.
 # In keras, pretrained models have a layer name dynamically generated
 # without overlap between models, so the layer name of the first load and second load changes.
@@ -203,7 +203,7 @@ model = P2PNet(
 ```
 ### Visualize model structure
 ```python
-plot_model(model.build_graph(), show_shapes=True, to_file='model.png')
+plot_model(model.build_graph(shape=(128, 128, 3)), show_shapes=True, to_file='model.png')
 ```
 This is the visualized model structure with VGG16 backbone with feature size of 256. The model receives arbitrary input shape (divisable by 128) but are fixed to 128 for visualization.
 
@@ -247,13 +247,13 @@ optimizer = tf.keras.optimizers.RMSprop(learning_rate=1e-4)
 for layer in model.layers:
     if 'backbone' in layer.name:
         logger.info("UnFreezing Layer: {}".format(layer.name))
-        layer.trainable = True        
+        layer.trainable = True
 model.compile(loss = P2PLoss(), optimizer=optimizer, metrics = [P2PMAE(),P2PMSE()])
 model.fit(train_dt,
           validation_data = val_dt,
           validation_freq=10,
         epochs=1000,
-        workers=15, 
+        workers=15,
         use_multiprocessing=True, callbacks=[ckpt, es, ws])
 ```
 
@@ -282,7 +282,7 @@ plt.subplots_adjust(left=0, bottom=0)
 - The model prediction outputs array with the following shape.
   - (batch, num of proposal points, xycoords and dense class logits)
   - x y coordinate corresponds to original image coordinate, so no coordinate conversion is needed.
-  - for single class detection, the logit column size are 2, background is included for the first column. 
+  - for single class detection, the logit column size are 2, background is included for the first column.
   - postprocessing is done by a simple function (see utils.general.postprocessing)
 
 ```python
@@ -309,7 +309,7 @@ print(preds)
 ## Unresolved Issues
 - The tensorflow keras model is coded by subclass API. therefore model can be loaded via checkpoint only. Looking for a workaround to save the model via SavedModel, however have not found such solution yet.
 - Training runs fine, however the below Warning message is displayed. This does not affect the training process, but I don't know why this occurs.
-- 
+-
   ```bash
   [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
           [[{{node Placeholder/_0}}]]
@@ -317,20 +317,20 @@ print(preds)
 
 ## Misc.
 
-### Reference 
+### Reference
 
 - [The P2PNet Paper in arxiv](https://arxiv.org/abs/2107.12746)
 
 - [Official github repository](https://github.com/TencentYoutuResearch/CrowdCounting-P2PNet)
 
-  - **IMPORTANT**. 
+  - **IMPORTANT**.
     - To avoid legal issues, I tentatively set the license following the [official](https://github.com/TencentYoutuResearch/CrowdCounting-P2PNet/blob/main/LICENSE). However, after confirmation, can release the repo as other license format. Read the following note.
-  - **ADVICE WANTED**. 
-    - The original repo states that any "with modification" of the repo will be restricted to the original license. However I wrote this code from scratch reading the paper, and believe is not a derivative, therefore I beleive I can set any license I want. 
+  - **ADVICE WANTED**.
+    - The original repo states that any "with modification" of the repo will be restricted to the original license. However I wrote this code from scratch reading the paper, and believe is not a derivative, therefore I beleive I can set any license I want.
     - Nonetheless, I can not assure to any third person for use of this repo in other license format, as I am not a professional in this field, as the context of "with modification" is vague to me.
-    - If someone can confirm/assure that this repo codes are safe to set my own license, I can change the LICENCE as soon as possible. 
+    - If someone can confirm/assure that this repo codes are safe to set my own license, I can change the LICENCE as soon as possible.
 
-- [detr-tensorflow](https://github.com/Visual-Behavior/detr-tensorflow) 
+- [detr-tensorflow](https://github.com/Visual-Behavior/detr-tensorflow)
   - Borrowed codes around Hungarian Matching Algorithm* and Categorical Cross Entropy Loss. This repo is a MIT License, so this should be not a problem upon custom license as long as I cite the repo.
   - Note. In the detr-tensorflow repository, losses are calculated per image via for loop and stored in list for further calculation. In this repo, I used tf.map_fn instead to deal with tf.keras graph scope problems.
 
