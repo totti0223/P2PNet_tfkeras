@@ -1,13 +1,21 @@
 # tf.keras implementation of P2PNet
 - This repository contains codes for P2PNet Crowd Counting implemented in tensorflow.keras. *(UNDER DEVELOPMENT)*. 
+- See [P2PNet Paper in arxiv](https://arxiv.org/abs/2107.12746) for details
 - The code is prepared for easy backbone and FPN replacement.
-- **Disclaimer**. As I am rather a user than a writer of DL, don't blame me for any inefficiency or misimplementation of the citing paper. This was created for my personal use. Pull requests and advices are really welcome. Issues are also welcome but cannnot guarantee any solution.
 
-Prediction (tentative)
+## Updates
+- 2023/05/10 Confirmed from the authors of P2PNet to able to release this repository and its derivatives independent from the [official implementation](https://github.com/TencentYoutuResearch/CrowdCounting-P2PNet). Now this repo is Apache 2.0. Great thanks.
+
+
+
+
+## At a glance (tentative)
 
 ![tentative_checkpoint_results](resources/demo4.png "tentative ckpt result2")
 
 - [tf.keras implementation of P2PNet](#tfkeras-implementation-of-p2pnet)
+  - [Updates](#updates)
+  - [At a glance (tentative)](#at-a-glance-tentative)
   - [Quick Demo](#quick-demo)
   - [Instructions](#instructions)
     - [Installation](#installation)
