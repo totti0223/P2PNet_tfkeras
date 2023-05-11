@@ -17,6 +17,7 @@
   - [Updates](#updates)
   - [At a glance (tentative)](#at-a-glance-tentative)
   - [Quick Demo](#quick-demo)
+  - [Models (tentative)](#models-tentative)
   - [Instructions](#instructions)
     - [Installation](#installation)
     - [Demo](#demo)
@@ -42,6 +43,13 @@
 Open this notebook in colab and execute.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/totti0223/P2PNet_tfkeras/blob/master/notebooks/P2PNet_colab_demo.ipynb)
+
+## Models (tentative)
+*note: There may be bug in MSE calculation... Too large*
+|  Model File Name  |  Note  | SHTechPartA MAE/MSE
+| ---- | ---- | ---- |
+|  VGG16_256_860  |  ckpt file; VGG16; filter no. 256; early stop at 860 epoch; used 80% of SHHA part A train data; default training parameters | 111.53/27240.04
+|  shha_datasetA_MNV3_256_845  |  ckpt file; MobileNetV3_large; filter no. 256, early stop at 845 epoch; used 80% of SHHA part A train data; default training parameters  | 124.46/34444.38 |
 
 ## Instructions
 
@@ -322,13 +330,6 @@ print(preds)
 - [The P2PNet Paper in arxiv](https://arxiv.org/abs/2107.12746)
 
 - [Official github repository](https://github.com/TencentYoutuResearch/CrowdCounting-P2PNet)
-
-  - **IMPORTANT**. 
-    - To avoid legal issues, I tentatively set the license following the [official](https://github.com/TencentYoutuResearch/CrowdCounting-P2PNet/blob/main/LICENSE). However, after confirmation, can release the repo as other license format. Read the following note.
-  - **ADVICE WANTED**. 
-    - The original repo states that any "with modification" of the repo will be restricted to the original license. However I wrote this code from scratch reading the paper, and believe is not a derivative, therefore I beleive I can set any license I want. 
-    - Nonetheless, I can not assure to any third person for use of this repo in other license format, as I am not a professional in this field, as the context of "with modification" is vague to me.
-    - If someone can confirm/assure that this repo codes are safe to set my own license, I can change the LICENCE as soon as possible. 
 
 - [detr-tensorflow](https://github.com/Visual-Behavior/detr-tensorflow) 
   - Borrowed codes around Hungarian Matching Algorithm* and Categorical Cross Entropy Loss. This repo is a MIT License, so this should be not a problem upon custom license as long as I cite the repo.
