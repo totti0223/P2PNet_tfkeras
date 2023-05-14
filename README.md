@@ -1,5 +1,5 @@
 # tf.keras implementation of P2PNet
-- This repository contains codes for P2PNet Crowd Counting implemented in tensorflow.keras. *(UNDER DEVELOPMENT)*. 
+- This repository contains codes for P2PNet Crowd Counting implemented in tensorflow.keras. *(UNDER DEVELOPMENT)*.
 - See [P2PNet Paper in arxiv](https://arxiv.org/abs/2107.12746) for details
 - The code is prepared for easy backbone and FPN replacement.
 
@@ -37,6 +37,7 @@
     - [Compile \& Train](#compile--train)
     - [Predict, Post Process, and Visualize](#predict-post-process-and-visualize)
   - [Unresolved Issues](#unresolved-issues)
+  - [=======](#)
   - [Misc.](#misc)
     - [Reference](#reference)
     - [Wandb compatibility](#wandb-compatibility)
@@ -155,7 +156,7 @@ for images, y_trues in train_dt:
     break
 ```
 - The dataloader inherits the tf.keras.utils.Sequence class utilizing pycocotools.
-- Outputs 
+- Outputs
   - Image (batch, height, width, channel)
     - To handle batch, image size must be the same.
     - Image size must be divisable by 128. (more exactly, divisable by stride ex. 8 by default)
@@ -180,7 +181,7 @@ print(y_trues)
 Implemented via tf.keras.models.Model class.
 ```python
 K.clear_session()
-# Since I determine the output layer of backbone by the model name, 
+# Since I determine the output layer of backbone by the model name,
 # must clear the session before loading the model to ensure proper loading.
 # In keras, pretrained models have a layer name dynamically generated
 # without overlap between models, so the layer name of the first load and second load changes.
@@ -217,7 +218,7 @@ model = P2PNet(
 ```
 ### Visualize model structure
 ```python
-plot_model(model.build_graph(), show_shapes=True, to_file='model.png')
+plot_model(model.build_graph(shape=(128, 128, 3)), show_shapes=True, to_file='model.png')
 ```
 This is the visualized model structure with VGG16 backbone with feature size of 256. The model receives arbitrary input shape (divisable by 128) but are fixed to 128 for visualization.
 
@@ -261,13 +262,13 @@ optimizer = tf.keras.optimizers.RMSprop(learning_rate=1e-4)
 for layer in model.layers:
     if 'backbone' in layer.name:
         logger.info("UnFreezing Layer: {}".format(layer.name))
-        layer.trainable = True        
+        layer.trainable = True
 model.compile(loss = P2PLoss(), optimizer=optimizer, metrics = [P2PMAE(),P2PMSE()])
 model.fit(train_dt,
           validation_data = val_dt,
           validation_freq=10,
         epochs=1000,
-        workers=15, 
+        workers=15,
         use_multiprocessing=True, callbacks=[ckpt, es, ws])
 ```
 
@@ -296,7 +297,7 @@ plt.subplots_adjust(left=0, bottom=0)
 - The model prediction outputs array with the following shape.
   - (batch, num of proposal points, xycoords and dense class logits)
   - x y coordinate corresponds to original image coordinate, so no coordinate conversion is needed.
-  - for single class detection, the logit column size are 2, background is included for the first column. 
+  - for single class detection, the logit column size are 2, background is included for the first column.
   - postprocessing is done by a simple function (see utils.general.postprocessing)
 
 ```python
@@ -313,14 +314,22 @@ print(preds)
 
 ## Unresolved Issues
 - Training runs fine, however the below Warning message is displayed. This does not affect the training process, but I don't know why this occurs.
+<<<<<<< HEAD
     ```bash
     [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
             [[{{node Placeholder/_0}}]]
     ```
+=======
+-
+  ```bash
+  [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
+          [[{{node Placeholder/_0}}]]
+  ```
+>>>>>>> 1fffdd655a21b51d4db3060148cf5d55c97360c4
 
 ## Misc.
 
-### Reference 
+### Reference
 
 - [The P2PNet Paper in arxiv](https://arxiv.org/abs/2107.12746)
 

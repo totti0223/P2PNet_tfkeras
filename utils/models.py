@@ -39,17 +39,17 @@ class RefPoints(tf.keras.layers.Layer):
         image_shape = tf.shape(image)[1:3]
         image_shapes = [(image_shape + 2 ** x - 1) // (2 ** x) for x in self.pyramid_levels]
         output_ref_points = tf.zeros((0, 2), dtype=tf.float32)
-        
+
         ref_points = self.generate_ref_points(2**self.pyramid_levels[0], row=self.row, line=self.line)
         offsetted_ref_points = self.add_offset2refpoints(image_shapes[0], self.strides[0], tf.cast(ref_points, tf.float32))
         output_ref_points = tf.concat([output_ref_points, offsetted_ref_points], axis=0)
-        
+
         output_ref_points = tf.tile(
             tf.expand_dims(output_ref_points, axis=0),
             multiples = [tf.shape(image)[0], 1, 1]
         )
         return output_ref_points
-    
+
     def get_config(self):
         config = super(RefPoints, self).get_config()
         config.update({
@@ -75,7 +75,7 @@ class P2PNet(tf.keras.models.Model):
                  gamma=100,
                   **kwargs):
         super(P2PNet, self).__init__(**kwargs)
-        
+
         #self.loss_func = custom_loss
         self.no_classes = no_classes + 1
         self.feature_size = feature_size
@@ -103,7 +103,7 @@ class P2PNet(tf.keras.models.Model):
             setattr(self, "fpn_conv%d" % i, tf.keras.layers.Conv2D(self.feature_size, 1, padding="same", name="fpn_conv%d" % i))
             setattr(self, "fpn_add%d" % i, tf.keras.layers.Add(name="fpn_add%d" % i))
         self.fpn_convout = tf.keras.layers.Conv2D(self.feature_size, 3, padding="same", name="fpn_convout%d" % i)
-        
+
         # classification head
         self.cls_head0 = tf.keras.layers.Conv2D(self.feature_size, 3, padding="same", name="cls_head0")
         self.cls_relu0 = tf.keras.layers.ReLU(name="cls_relu0")
@@ -154,7 +154,7 @@ class P2PNet(tf.keras.models.Model):
             pyramid_levels=[3,],
             row=np.sqrt(self.no_reference_points),
             line=np.sqrt(self.no_reference_points))(inputs)
-    
+
         reg = reg * self.gamma + ref_points
 
         outputs = tf.concat([reg, cls], axis=-1)
@@ -181,7 +181,7 @@ class P2PNet(tf.keras.models.Model):
         # Return a dictionary mapping metric names to their values
         results = {m.name: m.result() for m in self.metrics}
         return results
-    
+
     def test_step(self, data):
         x, y_true = data
         y_pred = self(x, training=False)
@@ -191,16 +191,16 @@ class P2PNet(tf.keras.models.Model):
         # Return a dictionary mapping metric names to their values
         results = {m.name: m.result() for m in self.metrics}
         return results
-    
+
     # def build(self, input_shape):
     #     input_layer = tf.keras.layers.Input(shape=input_shape[1:])
     #     _ = self.call(input_layer)
     #     super(P2PNet, self).build(input_shape)
-    
-    def build_graph(self):
-        x = tf.keras.layers.Input(shape=(128, 128, 3))
+
+    def build_graph(self, shape=(128, 128, 3)):
+        x = tf.keras.layers.Input(shape=shape)
         return tf.keras.models.Model(inputs=[x], outputs=self.call(x))
-    
+
     def get_config(self):
         config = super(P2PNet, self).get_config()
         config.update({
