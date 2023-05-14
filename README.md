@@ -37,7 +37,6 @@
     - [Compile \& Train](#compile--train)
     - [Predict, Post Process, and Visualize](#predict-post-process-and-visualize)
   - [Unresolved Issues](#unresolved-issues)
-  - [=======](#)
   - [Misc.](#misc)
     - [Reference](#reference)
     - [Wandb compatibility](#wandb-compatibility)
@@ -314,18 +313,10 @@ print(preds)
 
 ## Unresolved Issues
 - Training runs fine, however the below Warning message is displayed. This does not affect the training process, but I don't know why this occurs.
-<<<<<<< HEAD
     ```bash
     [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
             [[{{node Placeholder/_0}}]]
     ```
-=======
--
-  ```bash
-  [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
-          [[{{node Placeholder/_0}}]]
-  ```
->>>>>>> 1fffdd655a21b51d4db3060148cf5d55c97360c4
 
 ## Misc.
 
