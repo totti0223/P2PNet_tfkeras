@@ -7,6 +7,12 @@
 - 2023/05/10 Confirmed from the authors of P2PNet to able to release this repository and its derivatives independent from the [official implementation](https://github.com/TencentYoutuResearch/CrowdCounting-P2PNet). Now this repo is Apache 2.0. Great thanks.
 
 
+## To do
+- Write custom WandbEvalCallback class to visualize validation output in browser.
+- Implement nAP.
+- Layerwise learning rate implementation.
+- Create model weights with multiple backbones using multiple crowd training dataset for share
+- Implement [P2PNet-Soy](https://github.com/UTokyo-FieldPhenomics-Lab/P2PNet-Soy)
 
 
 ## At a glance (tentative)
@@ -15,6 +21,7 @@
 
 - [tf.keras implementation of P2PNet](#tfkeras-implementation-of-p2pnet)
   - [Updates](#updates)
+  - [To do](#to-do)
   - [At a glance (tentative)](#at-a-glance-tentative)
   - [Quick Demo](#quick-demo)
   - [Models (tentative)](#models-tentative)
@@ -29,7 +36,6 @@
     - [Visualize model structure](#visualize-model-structure)
     - [Compile \& Train](#compile--train)
     - [Predict, Post Process, and Visualize](#predict-post-process-and-visualize)
-  - [To do](#to-do)
   - [Unresolved Issues](#unresolved-issues)
   - [Misc.](#misc)
     - [Reference](#reference)
@@ -45,8 +51,8 @@ Open this notebook in colab and execute.
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/totti0223/P2PNet_tfkeras/blob/master/notebooks/P2PNet_colab_demo.ipynb)
 
 ## Models (tentative)
-*note: There may be bug in MSE calculation... Too large*
-|  Model File Name  |  Note  | SHTechPartA MAE/MSE
+*note: There may be bug in MSE calculation... Value too large than expected*
+|  Model File Name  |  Note  | SHTechPartA test dataset MAE/MSE
 | ---- | ---- | ---- |
 |  VGG16_256_860  |  ckpt file; VGG16; filter no. 256; early stop at 860 epoch; used 80% of SHHA part A train data; default training parameters | 111.53/27240.04
 |  shha_datasetA_MNV3_256_845  |  ckpt file; MobileNetV3_large; filter no. 256, early stop at 845 epoch; used 80% of SHHA part A train data; default training parameters  | 124.46/34444.38 |
@@ -305,23 +311,12 @@ print(preds)
 #   [ 1.01960858e+03  7.52482849e+02  5.38174582e+00 -2.88597417e+00]]]
 ```
 
-## To do
-- Write custom WandbEvalCallback class to visualize validation output in browser.
-- Implement nAP.
-- Keypoint safe random crop in albumentations.
-- Layerwise learning rate implementation.
-- Cross Validation Snippetts
-- Retreive Performance against SHHA dataset.
-
-
 ## Unresolved Issues
-- The tensorflow keras model is coded by subclass API. therefore model can be loaded via checkpoint only. Looking for a workaround to save the model via SavedModel, however have not found such solution yet.
 - Training runs fine, however the below Warning message is displayed. This does not affect the training process, but I don't know why this occurs.
-- 
-  ```bash
-  [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
-          [[{{node Placeholder/_0}}]]
-  ```
+    ```bash
+    [/device:CPU:0] (DEBUG INFO) Executor start aborting (this does not indicate an error and you can ignore this message): INVALID_ARGUMENT: You must feed a value for placeholder tensor 'Placeholder/_0' with dtype int32
+            [[{{node Placeholder/_0}}]]
+    ```
 
 ## Misc.
 

@@ -33,7 +33,7 @@ def load_feature_extraction_model(model_name=None, input_shape=(None,None,3), pr
     
     feature_extraction_model = tf.keras.Model(inputs=backbone.input, outputs=[backbone.get_layer(layer).output for layer in layers_names], name = name)
 
-    # add preprocessing layer if needed
+    # add preprocessing in the case of vgg, where the preprocessing is not included in the model class
     if model_map["preprocess_input"] is not None and preprocessing:
         inputs = tf.keras.layers.Input(shape=input_shape)
         preprocessed_inputs = tf.keras.layers.Lambda(model_map["preprocess_input"], "preproc", name="preproc")(inputs)
